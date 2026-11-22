@@ -1,0 +1,681 @@
+{
+  "a_cv_calibration_and_threshold_spread": {
+    "calibration_bins": [
+      {
+        "actual_spam_rate": 0.009433962264150943,
+        "bin": "[0.0, 0.2)",
+        "count": 106,
+        "mean_score": 0.0775781230746156,
+        "spam_count": 1
+      },
+      {
+        "actual_spam_rate": 0.2,
+        "bin": "[0.2, 0.4)",
+        "count": 15,
+        "mean_score": 0.2720834452818452,
+        "spam_count": 3
+      },
+      {
+        "actual_spam_rate": 0.7692307692307693,
+        "bin": "[0.4, 0.6)",
+        "count": 13,
+        "mean_score": 0.49457862311955664,
+        "spam_count": 10
+      },
+      {
+        "actual_spam_rate": 1.0,
+        "bin": "[0.6, 0.8)",
+        "count": 10,
+        "mean_score": 0.7171678198110596,
+        "spam_count": 10
+      },
+      {
+        "actual_spam_rate": 1.0,
+        "bin": "[0.8, 1.0]",
+        "count": 36,
+        "mean_score": 0.9118318392568381,
+        "spam_count": 36
+      }
+    ],
+    "hyperparams": {
+      "C": 10.0
+    },
+    "model_type": "logistic_regression",
+    "per_fold_thresholds_max_fp_0": [
+      {
+        "fold": 1,
+        "fp": 0,
+        "threshold": 0.5300684412893867,
+        "tp": 12
+      },
+      {
+        "fold": 2,
+        "fp": 0,
+        "threshold": 0.36149435129854457,
+        "tp": 11
+      },
+      {
+        "fold": 3,
+        "fp": 0,
+        "threshold": 0.4458846919031751,
+        "tp": 12
+      },
+      {
+        "fold": 4,
+        "fp": 0,
+        "threshold": 0.3472098509666085,
+        "tp": 12
+      },
+      {
+        "fold": 5,
+        "fp": 0,
+        "threshold": 0.5125547679978397,
+        "tp": 9
+      }
+    ],
+    "per_fold_thresholds_max_fp_1": [
+      {
+        "fold": 1,
+        "fp": 0,
+        "threshold": 0.5300684412893867,
+        "tp": 12
+      },
+      {
+        "fold": 2,
+        "fp": 0,
+        "threshold": 0.36149435129854457,
+        "tp": 11
+      },
+      {
+        "fold": 3,
+        "fp": 0,
+        "threshold": 0.4458846919031751,
+        "tp": 12
+      },
+      {
+        "fold": 4,
+        "fp": 0,
+        "threshold": 0.3472098509666085,
+        "tp": 12
+      },
+      {
+        "fold": 5,
+        "fp": 1,
+        "threshold": 0.2188702632231443,
+        "tp": 12
+      }
+    ],
+    "selected_oof_threshold": 0.3289945016365051
+  },
+  "b_masking_vs_no_masking": {
+    "with_masking": {
+      "cv_oof": {
+        "accuracy": 0.9722222222222222,
+        "accuracy_fraction": "175/180",
+        "confusion_matrix": {
+          "fn": 2,
+          "fp": 3,
+          "tn": 117,
+          "tp": 58
+        },
+        "fpr": 0.025,
+        "fpr_fraction": "3/120",
+        "n_ham": 120,
+        "n_pred_spam": 61,
+        "n_spam": 60,
+        "n_total": 180,
+        "pr_auc": 0.990997880669902,
+        "precision": 0.9508196721311475,
+        "precision_fraction": "58/61",
+        "recall": 0.9666666666666667,
+        "recall_fraction": "58/60",
+        "threshold": 0.3289945016365051
+      },
+      "validation_informational": {
+        "accuracy": 0.9833333333333333,
+        "accuracy_fraction": "59/60",
+        "confusion_matrix": {
+          "fn": 1,
+          "fp": 0,
+          "tn": 40,
+          "tp": 19
+        },
+        "fpr": 0.0,
+        "fpr_fraction": "0/40",
+        "hyperparams": {
+          "C": 10.0
+        },
+        "model_type": "logistic_regression",
+        "n_ham": 40,
+        "n_pred_spam": 19,
+        "n_spam": 20,
+        "n_total": 60,
+        "pr_auc": 1.0,
+        "precision": 1.0,
+        "precision_fraction": "19/19",
+        "recall": 0.95,
+        "recall_fraction": "19/20",
+        "threshold": 0.3289945016365051
+      },
+      "vocab_size": 2632,
+      "winner_model_type": "logistic_regression",
+      "winner_param": {
+        "C": 10.0
+      }
+    },
+    "without_masking": {
+      "cv_oof": {
+        "accuracy": 0.9722222222222222,
+        "accuracy_fraction": "175/180",
+        "confusion_matrix": {
+          "fn": 2,
+          "fp": 3,
+          "tn": 117,
+          "tp": 58
+        },
+        "fpr": 0.025,
+        "fpr_fraction": "3/120",
+        "n_ham": 120,
+        "n_pred_spam": 61,
+        "n_spam": 60,
+        "n_total": 180,
+        "pr_auc": 0.9929555692628795,
+        "precision": 0.9508196721311475,
+        "precision_fraction": "58/61",
+        "recall": 0.9666666666666667,
+        "recall_fraction": "58/60",
+        "threshold": 0.30194223867815795
+      },
+      "validation_informational": {
+        "accuracy": 0.9833333333333333,
+        "accuracy_fraction": "59/60",
+        "confusion_matrix": {
+          "fn": 1,
+          "fp": 0,
+          "tn": 40,
+          "tp": 19
+        },
+        "fpr": 0.0,
+        "fpr_fraction": "0/40",
+        "n_ham": 40,
+        "n_pred_spam": 19,
+        "n_spam": 20,
+        "n_total": 60,
+        "pr_auc": 1.0,
+        "precision": 1.0,
+        "precision_fraction": "19/19",
+        "recall": 0.95,
+        "recall_fraction": "19/20",
+        "threshold": 0.30194223867815795
+      },
+      "vocab_size": 2648,
+      "winner_model_type": "logistic_regression",
+      "winner_param": {
+        "C": 100.0
+      }
+    }
+  },
+  "c_validation_perturbations": {
+    "ilug_footer_perturbation": {
+      "appended_footer": "-- \nIrish Linux Users' Group: ilug@linux.ie\nhttp://www.linux.ie/mailman/listinfo/ilug for (un)subscription information.\nList maintainer: listmaster@linux.ie",
+      "details": [
+        {
+          "abs_diff": 0.0,
+          "message_id": "6c95b20ac24fd89d",
+          "orig_label": "spam",
+          "orig_score": 0.8606622038132429,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.8606622038132429
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "eec728149e9886d7",
+          "orig_label": "spam",
+          "orig_score": 0.941462547237166,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.941462547237166
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "27bcc632c0a2fc78",
+          "orig_label": "spam",
+          "orig_score": 0.7860494968318404,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.7860494968318404
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "da32333482ad02f0",
+          "orig_label": "spam",
+          "orig_score": 0.947305486706002,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.947305486706002
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "017f0817d4c92951",
+          "orig_label": "ham",
+          "orig_score": 0.21732859529672566,
+          "perturbed_label": "ham",
+          "perturbed_score": 0.21732859529672566
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "8f6272eaef144851",
+          "orig_label": "spam",
+          "orig_score": 0.7128596477336862,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.7128596477336862
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "f1c5361fd9a7091c",
+          "orig_label": "spam",
+          "orig_score": 0.6990222863085224,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.6990222863085224
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "229ec2c1ab1a9a42",
+          "orig_label": "spam",
+          "orig_score": 0.8939849173341804,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.8939849173341804
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "182f0590841142c4",
+          "orig_label": "spam",
+          "orig_score": 0.9014875088233908,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9014875088233908
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "1c0c307bc78acb0d",
+          "orig_label": "spam",
+          "orig_score": 0.9203674780111852,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9203674780111852
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "d52481af2cae9d6f",
+          "orig_label": "spam",
+          "orig_score": 0.8869284458819118,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.8869284458819118
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "c8b94646b466d88f",
+          "orig_label": "spam",
+          "orig_score": 0.9787912543166237,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9787912543166237
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "e8622ab1f5f53257",
+          "orig_label": "spam",
+          "orig_score": 0.743298904487349,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.743298904487349
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "1e7b901a63477d06",
+          "orig_label": "spam",
+          "orig_score": 0.9342392532134716,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9342392532134716
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "102c6778e128a221",
+          "orig_label": "spam",
+          "orig_score": 0.6082695082111333,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.6082695082111333
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "5587807b85eebb8d",
+          "orig_label": "spam",
+          "orig_score": 0.8674568529790503,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.8674568529790503
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "64329ea8627bc9d2",
+          "orig_label": "spam",
+          "orig_score": 0.9253374644077245,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9253374644077245
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "1065919b68aa776c",
+          "orig_label": "spam",
+          "orig_score": 0.9739685262933484,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9739685262933484
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "e37aa29ae4267989",
+          "orig_label": "spam",
+          "orig_score": 0.6776159330179351,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.6776159330179351
+        },
+        {
+          "abs_diff": 0.0,
+          "message_id": "03d402d1641ab499",
+          "orig_label": "spam",
+          "orig_score": 0.5409128824241788,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.5409128824241788
+        }
+      ],
+      "label_flips": 0,
+      "max_abs_score_diff": 0.0,
+      "score_changes_gt_1e_12": 0
+    },
+    "n_spam_tested": 20,
+    "unmasked_quote_perturbation": {
+      "details": [
+        {
+          "flipped": false,
+          "message_id": "6c95b20ac24fd89d",
+          "orig_label": "spam",
+          "orig_score": 0.8606622038132429,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.833823496217114,
+          "score_drop": 0.02683870759612883
+        },
+        {
+          "flipped": false,
+          "message_id": "eec728149e9886d7",
+          "orig_label": "spam",
+          "orig_score": 0.941462547237166,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9302813682751546,
+          "score_drop": 0.011181178962011429
+        },
+        {
+          "flipped": false,
+          "message_id": "27bcc632c0a2fc78",
+          "orig_label": "spam",
+          "orig_score": 0.7860494968318404,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.6575517978786057,
+          "score_drop": 0.1284976989532347
+        },
+        {
+          "flipped": false,
+          "message_id": "da32333482ad02f0",
+          "orig_label": "spam",
+          "orig_score": 0.947305486706002,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9170082858354096,
+          "score_drop": 0.0302972008705924
+        },
+        {
+          "flipped": false,
+          "message_id": "017f0817d4c92951",
+          "orig_label": "ham",
+          "orig_score": 0.21732859529672566,
+          "perturbed_label": "ham",
+          "perturbed_score": 0.21185424998628768,
+          "score_drop": 0.0054743453104379725
+        },
+        {
+          "flipped": false,
+          "message_id": "8f6272eaef144851",
+          "orig_label": "spam",
+          "orig_score": 0.7128596477336862,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.5316992755949103,
+          "score_drop": 0.1811603721387759
+        },
+        {
+          "flipped": false,
+          "message_id": "f1c5361fd9a7091c",
+          "orig_label": "spam",
+          "orig_score": 0.6990222863085224,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.6001859228444447,
+          "score_drop": 0.09883636346407765
+        },
+        {
+          "flipped": false,
+          "message_id": "229ec2c1ab1a9a42",
+          "orig_label": "spam",
+          "orig_score": 0.8939849173341804,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.8232785799760635,
+          "score_drop": 0.07070633735811693
+        },
+        {
+          "flipped": false,
+          "message_id": "182f0590841142c4",
+          "orig_label": "spam",
+          "orig_score": 0.9014875088233908,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.8658923960889005,
+          "score_drop": 0.03559511273449034
+        },
+        {
+          "flipped": false,
+          "message_id": "1c0c307bc78acb0d",
+          "orig_label": "spam",
+          "orig_score": 0.9203674780111852,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.8489516235621415,
+          "score_drop": 0.07141585444904375
+        },
+        {
+          "flipped": false,
+          "message_id": "d52481af2cae9d6f",
+          "orig_label": "spam",
+          "orig_score": 0.8869284458819118,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.8634617899017069,
+          "score_drop": 0.02346665598020492
+        },
+        {
+          "flipped": false,
+          "message_id": "c8b94646b466d88f",
+          "orig_label": "spam",
+          "orig_score": 0.9787912543166237,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9700849825579424,
+          "score_drop": 0.008706271758681328
+        },
+        {
+          "flipped": false,
+          "message_id": "e8622ab1f5f53257",
+          "orig_label": "spam",
+          "orig_score": 0.743298904487349,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.6520675285087735,
+          "score_drop": 0.09123137597857556
+        },
+        {
+          "flipped": false,
+          "message_id": "1e7b901a63477d06",
+          "orig_label": "spam",
+          "orig_score": 0.9342392532134716,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9316418604403919,
+          "score_drop": 0.0025973927730796875
+        },
+        {
+          "flipped": false,
+          "message_id": "102c6778e128a221",
+          "orig_label": "spam",
+          "orig_score": 0.6082695082111333,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.5049357893485896,
+          "score_drop": 0.10333371886254372
+        },
+        {
+          "flipped": false,
+          "message_id": "5587807b85eebb8d",
+          "orig_label": "spam",
+          "orig_score": 0.8674568529790503,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.7684989099393874,
+          "score_drop": 0.09895794303966288
+        },
+        {
+          "flipped": false,
+          "message_id": "64329ea8627bc9d2",
+          "orig_label": "spam",
+          "orig_score": 0.9253374644077245,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.8459639148453123,
+          "score_drop": 0.07937354956241216
+        },
+        {
+          "flipped": false,
+          "message_id": "1065919b68aa776c",
+          "orig_label": "spam",
+          "orig_score": 0.9739685262933484,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.9686007944937023,
+          "score_drop": 0.005367731799646114
+        },
+        {
+          "flipped": false,
+          "message_id": "e37aa29ae4267989",
+          "orig_label": "spam",
+          "orig_score": 0.6776159330179351,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.6098447031983327,
+          "score_drop": 0.06777122981960237
+        },
+        {
+          "flipped": false,
+          "message_id": "03d402d1641ab499",
+          "orig_label": "spam",
+          "orig_score": 0.5409128824241788,
+          "perturbed_label": "spam",
+          "perturbed_score": 0.49323297337113114,
+          "score_drop": 0.04767990905304764
+        }
+      ],
+      "inserted_prefix": "On Mon, Sep 23, 2002 at 10:15:00AM +0100, David wrote:\n> Here is the previous message.",
+      "label_flips": 0,
+      "max_score_drop": 0.1811603721387759,
+      "mean_score_drop": 0.059424447523218314,
+      "median_score_drop": 0.05772556943632501,
+      "min_score_drop": 0.0025973927730796875
+    }
+  },
+  "d_shared_threads_validation": {
+    "definition": "Temat z pierwszej linii bez prefiksu Subject:, bez wielokrotnych Re:/Fwd:/Fw:, bez znacznikow list [...], male litery i ujednolicone biale znaki.",
+    "metrics_other": {
+      "accuracy": 0.9811320754716981,
+      "accuracy_fraction": "52/53",
+      "confusion_matrix": {
+        "fn": 1,
+        "fp": 0,
+        "tn": 34,
+        "tp": 18
+      },
+      "fpr": 0.0,
+      "fpr_fraction": "0/34",
+      "n_ham": 34,
+      "n_pred_spam": 18,
+      "n_spam": 19,
+      "n_total": 53,
+      "pr_auc": 1.0,
+      "precision": 1.0,
+      "precision_fraction": "18/18",
+      "recall": 0.9473684210526315,
+      "recall_fraction": "18/19"
+    },
+    "metrics_shared": {
+      "accuracy": 1.0,
+      "accuracy_fraction": "7/7",
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 0,
+        "tn": 6,
+        "tp": 1
+      },
+      "fpr": 0.0,
+      "fpr_fraction": "0/6",
+      "n_ham": 6,
+      "n_pred_spam": 1,
+      "n_spam": 1,
+      "n_total": 7,
+      "pr_auc": 1.0,
+      "precision": 1.0,
+      "precision_fraction": "1/1",
+      "recall": 1.0,
+      "recall_fraction": "1/1"
+    },
+    "n_other": 53,
+    "n_other_ham": 34,
+    "n_other_spam": 19,
+    "n_shared": 7,
+    "n_shared_ham": 6,
+    "n_shared_spam": 1,
+    "shared_messages": [
+      {
+        "message_id": "eec728149e9886d7",
+        "normalized_subject": "seeking your partnership",
+        "predicted_label": "spam",
+        "score": 0.941462547237166,
+        "true_label": "spam"
+      },
+      {
+        "message_id": "297db24ff3c83184",
+        "normalized_subject": "deployment",
+        "predicted_label": "ham",
+        "score": 0.1108599498545021,
+        "true_label": "ham"
+      },
+      {
+        "message_id": "e31e74860d6dbdc2",
+        "normalized_subject": "patent on tmda-like system",
+        "predicted_label": "ham",
+        "score": 0.1102020116860736,
+        "true_label": "ham"
+      },
+      {
+        "message_id": "464580359acd5d49",
+        "normalized_subject": "secure sofware key",
+        "predicted_label": "ham",
+        "score": 0.03240648964447845,
+        "true_label": "ham"
+      },
+      {
+        "message_id": "04248c842ff97823",
+        "normalized_subject": "asynchronous i/o (was re: gasp!)",
+        "predicted_label": "ham",
+        "score": 0.04690528318837156,
+        "true_label": "ham"
+      },
+      {
+        "message_id": "332c061283fb119c",
+        "normalized_subject": "sed /s/united states/roman empire/g",
+        "predicted_label": "ham",
+        "score": 0.14341719872534667,
+        "true_label": "ham"
+      },
+      {
+        "message_id": "64bd31f3621b3fc4",
+        "normalized_subject": "a moment of silence for the first amendment",
+        "predicted_label": "ham",
+        "score": 0.04876277174307959,
+        "true_label": "ham"
+      }
+    ]
+  }
+}

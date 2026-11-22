@@ -1,0 +1,7 @@
+{
+  "models": {
+    "alternative_model.json": "41251e0a386590884eefa760db4c800243c29fff667a2f70d50e542b2dd08763",
+    "spam_classifier.json": "68cc96ef843e24f4b2d78fd79d6a49ea06fd4d0811da4a2488afe2fa68a3a28c"
+  },
+  "note": "Sumy SHA-256 zapisane przed pierwszym otwarciem validation.csv (zamrozenie modelu)."
+}

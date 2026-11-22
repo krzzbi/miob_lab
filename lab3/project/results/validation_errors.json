@@ -1,0 +1,82 @@
+{
+  "false_negatives": [
+    {
+      "error_type": "FN",
+      "message_id": "017f0817d4c92951",
+      "predicted_label": "ham",
+      "score": 0.21732859529672566,
+      "subject": "Subject: Newsletter Coach'Invest - Septembre 2002",
+      "text_preview": "Subject: Newsletter Coach'Invest - Septembre 2002 NEWSLETTER COACHINVEST  SEPTEMBRE 2002 CoachInvest, laccompagnateur des jeunes entreprises www.coachinvest.com ou 3615 COACHINVEST (0.34 Euros/min) DES NOUVELLES DE COACHINVEST. 1- Lancement réussi pour Co",
+      "threshold": 0.3289945016365051,
+      "top_5_by_abs_contribution": [
+        {
+          "contribution": 1.0816454859799782,
+          "tfidf": 0.2097555169535743,
+          "token": "<CAPS>",
+          "weight": 5.156696241841312
+        },
+        {
+          "contribution": -0.15444012568654814,
+          "tfidf": 0.2371253160378246,
+          "token": "<NUM>",
+          "weight": -0.6513017178727256
+        },
+        {
+          "contribution": 0.06360036304426789,
+          "tfidf": 0.06178408850034589,
+          "token": "mail",
+          "weight": 1.0293971245349332
+        },
+        {
+          "contribution": -0.05435025592198208,
+          "tfidf": 0.2849673583706384,
+          "token": "la",
+          "weight": -0.19072449642212094
+        },
+        {
+          "contribution": 0.04409674468258752,
+          "tfidf": 0.0685833030957177,
+          "token": "contact",
+          "weight": 0.6429661840731742
+        }
+      ],
+      "top_5_pushing_toward_error": [
+        {
+          "contribution": -0.15444012568654814,
+          "tfidf": 0.2371253160378246,
+          "token": "<NUM>",
+          "weight": -0.6513017178727256
+        },
+        {
+          "contribution": -0.05435025592198208,
+          "tfidf": 0.2849673583706384,
+          "token": "la",
+          "weight": -0.19072449642212094
+        },
+        {
+          "contribution": -0.036855889568780546,
+          "tfidf": 0.8660722362993811,
+          "token": "de",
+          "weight": -0.04255521424663279
+        },
+        {
+          "contribution": -0.02556755968680678,
+          "tfidf": 0.01399990450363234,
+          "token": "re",
+          "weight": -1.8262667206174985
+        },
+        {
+          "contribution": -0.005538441368970571,
+          "tfidf": 0.02947938190041087,
+          "token": "dont",
+          "weight": -0.1878750846161187
+        }
+      ],
+      "true_label": "spam"
+    }
+  ],
+  "false_positives": [],
+  "n_fn": 1,
+  "n_fp": 0,
+  "threshold": 0.3289945016365051
+}

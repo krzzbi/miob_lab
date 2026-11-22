@@ -1,0 +1,1166 @@
+{
+  "alternative_model_type": "multinomial_nb",
+  "alternative_param": {
+    "alpha": 0.1
+  },
+  "alternative_top_30": {
+    "ham": [
+      {
+        "token": "wrote",
+        "weight": -2.8495762107419615
+      },
+      {
+        "token": "rpm",
+        "weight": -2.7002065163325897
+      },
+      {
+        "token": "spam",
+        "weight": -2.537454227456622
+      },
+      {
+        "token": "cvs",
+        "weight": -2.438278144444655
+      },
+      {
+        "token": "folder",
+        "weight": -2.311390683946179
+      },
+      {
+        "token": "paul",
+        "weight": -2.263952514872418
+      },
+      {
+        "token": "man",
+        "weight": -2.2409033480666363
+      },
+      {
+        "token": "linux",
+        "weight": -2.2232041195586945
+      },
+      {
+        "token": "red",
+        "weight": -2.211660997410376
+      },
+      {
+        "token": "hat",
+        "weight": -2.2084833488320372
+      },
+      {
+        "token": "researchers",
+        "weight": -2.1986039018677186
+      },
+      {
+        "token": "server",
+        "weight": -2.195200961583616
+      },
+      {
+        "token": "say",
+        "weight": -2.170926360700342
+      },
+      {
+        "token": "kernel",
+        "weight": -2.1699391482108377
+      },
+      {
+        "token": "apt",
+        "weight": -2.150577811919349
+      },
+      {
+        "token": "window",
+        "weight": -2.108502300516702
+      },
+      {
+        "token": "python",
+        "weight": -2.102707180798993
+      },
+      {
+        "token": "drug",
+        "weight": -2.0612446902171175
+      },
+      {
+        "token": "sep",
+        "weight": -2.0590441153586863
+      },
+      {
+        "token": "py",
+        "weight": -2.0515326646663086
+      },
+      {
+        "token": "setup",
+        "weight": -2.0258142576081646
+      },
+      {
+        "token": "spamassassin",
+        "weight": -1.9707344764675527
+      },
+      {
+        "token": "writes",
+        "weight": -1.9662475084690847
+      },
+      {
+        "token": "matthias",
+        "weight": -1.946666966401235
+      },
+      {
+        "token": "trying",
+        "weight": -1.9463486576670324
+      },
+      {
+        "token": "headers",
+        "weight": -1.9397301336717252
+      },
+      {
+        "token": "uk",
+        "weight": -1.9117412897974049
+      },
+      {
+        "token": "maybe",
+        "weight": -1.8916785691250162
+      },
+      {
+        "token": "doesn",
+        "weight": -1.8884205269187326
+      },
+      {
+        "token": "bug",
+        "weight": -1.8777033230575055
+      }
+    ],
+    "spam": [
+      {
+        "token": "membership",
+        "weight": 3.542965895928006
+      },
+      {
+        "token": "domain",
+        "weight": 3.3284245980807388
+      },
+      {
+        "token": "click",
+        "weight": 3.037138632637104
+      },
+      {
+        "token": "poker",
+        "weight": 2.77293190635533
+      },
+      {
+        "token": "names",
+        "weight": 2.7343652237776706
+      },
+      {
+        "token": "receive",
+        "weight": 2.693053207104354
+      },
+      {
+        "token": "drive",
+        "weight": 2.684265766817748
+      },
+      {
+        "token": "lifetime",
+        "weight": 2.6634215800650907
+      },
+      {
+        "token": "credit",
+        "weight": 2.6459682273618537
+      },
+      {
+        "token": "vip",
+        "weight": 2.6265183758811848
+      },
+      {
+        "token": "removal",
+        "weight": 2.6038915783765555
+      },
+      {
+        "token": "natural",
+        "weight": 2.575422891731157
+      },
+      {
+        "token": "sites",
+        "weight": 2.558537044717891
+      },
+      {
+        "token": "special",
+        "weight": 2.5200654059359975
+      },
+      {
+        "token": "please",
+        "weight": 2.4935712573057316
+      },
+      {
+        "token": "register",
+        "weight": 2.4631706801927313
+      },
+      {
+        "token": "rates",
+        "weight": 2.445813889519475
+      },
+      {
+        "token": "br",
+        "weight": 2.434146123827553
+      },
+      {
+        "token": "loans",
+        "weight": 2.4185757546319193
+      },
+      {
+        "token": "visit",
+        "weight": 2.402594567090345
+      },
+      {
+        "token": "tobacco",
+        "weight": 2.36508948837983
+      },
+      {
+        "token": "days",
+        "weight": 2.341455134436358
+      },
+      {
+        "token": "ne",
+        "weight": 2.334026043884049
+      },
+      {
+        "token": "guaranteed",
+        "weight": 2.3320809942455316
+      },
+      {
+        "token": "prices",
+        "weight": 2.3290927249380005
+      },
+      {
+        "token": "wanted",
+        "weight": 2.319615506890983
+      },
+      {
+        "token": "mailings",
+        "weight": 2.2956345792075243
+      },
+      {
+        "token": "unsubscribe",
+        "weight": 2.269206566549209
+      },
+      {
+        "token": "investment",
+        "weight": 2.265113933029995
+      },
+      {
+        "token": "limited",
+        "weight": 2.24151952629083
+      }
+    ]
+  },
+  "masking_pattern_stats": [
+    {
+      "name": "subject_list_tags",
+      "pattern": "\\[(?:ILUG-Social|ILUG|Spambayes|zzzzteana|SAtalk|SAdev|s-t)\\]",
+      "sequential_ham": 32,
+      "sequential_spam": 18,
+      "sequential_total": 50,
+      "standalone_ham": 32,
+      "standalone_spam": 18,
+      "standalone_total": 50
+    },
+    {
+      "name": "ilug_footer_header",
+      "pattern": "(?:^|\\n)(?:>\\s*)*Irish Linux Users' Group(?:\\s+Social Events)?:\\s*(?:ilug|social)@linux\\.ie[^\\n]*",
+      "sequential_ham": 6,
+      "sequential_spam": 18,
+      "sequential_total": 24,
+      "standalone_ham": 6,
+      "standalone_spam": 18,
+      "standalone_total": 24
+    },
+    {
+      "name": "ilug_footer_listinfo",
+      "pattern": "(?:^|\\n)(?:>\\s*)*https?://www\\.linux\\.ie/mailman/listinfo/(?:ilug|social)\\s+for\\s+\\(un\\)subscription(?:\\s*\\n(?:>\\s*)*|\\s+)information\\.?",
+      "sequential_ham": 6,
+      "sequential_spam": 18,
+      "sequential_total": 24,
+      "standalone_ham": 6,
+      "standalone_spam": 18,
+      "standalone_total": 24
+    },
+    {
+      "name": "ilug_footer_maintainer",
+      "pattern": "(?:^|\\n)(?:>\\s*)*List maintainer:\\s*listmaster@linux\\.ie[^\\n]*",
+      "sequential_ham": 6,
+      "sequential_spam": 18,
+      "sequential_total": 24,
+      "standalone_ham": 6,
+      "standalone_spam": 18,
+      "standalone_total": 24
+    },
+    {
+      "name": "rpm_list_footer_name",
+      "pattern": "(?:^|\\n)(?:>\\s*)*RPM-List mailing list[^\\n]*",
+      "sequential_ham": 10,
+      "sequential_spam": 0,
+      "sequential_total": 10,
+      "standalone_ham": 10,
+      "standalone_spam": 0,
+      "standalone_total": 10
+    },
+    {
+      "name": "rpm_list_footer_url",
+      "pattern": "(?:^|\\n)(?:>\\s*)*https?://lists\\.freshrpms\\.net/mailman/listinfo/rpm-list[^\\n]*",
+      "sequential_ham": 10,
+      "sequential_spam": 0,
+      "sequential_total": 10,
+      "standalone_ham": 10,
+      "standalone_spam": 0,
+      "standalone_total": 10
+    },
+    {
+      "name": "sf_osdn_sponsor_block",
+      "pattern": "(?:^|\\n)(?:>\\s*)*-{10,}\\s*\\n(?:>\\s*)*This sf\\.net email is sponsored by:[\\s\\S]*?(?=\\n(?:>\\s*)*_{10,}|\\n\\s*\\n|\\Z)",
+      "sequential_ham": 6,
+      "sequential_spam": 0,
+      "sequential_total": 6,
+      "standalone_ham": 6,
+      "standalone_spam": 0,
+      "standalone_total": 6
+    },
+    {
+      "name": "satalk_footer_name",
+      "pattern": "(?:^|\\n)(?:>\\s*)*Spamassassin-talk mailing list[^\\n]*",
+      "sequential_ham": 6,
+      "sequential_spam": 0,
+      "sequential_total": 6,
+      "standalone_ham": 6,
+      "standalone_spam": 0,
+      "standalone_total": 6
+    },
+    {
+      "name": "satalk_footer_email",
+      "pattern": "(?:^|\\n)(?:>\\s*)*Spamassassin-talk@lists\\.sourceforge\\.net[^\\n]*",
+      "sequential_ham": 6,
+      "sequential_spam": 0,
+      "sequential_total": 6,
+      "standalone_ham": 6,
+      "standalone_spam": 0,
+      "standalone_total": 6
+    },
+    {
+      "name": "satalk_footer_url",
+      "pattern": "(?:^|\\n)(?:>\\s*)*https?://lists\\.sourceforge\\.net/lists/listinfo/spamassassin-talk[^\\n]*",
+      "sequential_ham": 6,
+      "sequential_spam": 0,
+      "sequential_total": 6,
+      "standalone_ham": 6,
+      "standalone_spam": 0,
+      "standalone_total": 6
+    },
+    {
+      "name": "exmh_footer_name",
+      "pattern": "(?:^|\\n)(?:>\\s*)*Exmh-(?:users|workers) mailing list[^\\n]*",
+      "sequential_ham": 7,
+      "sequential_spam": 0,
+      "sequential_total": 7,
+      "standalone_ham": 7,
+      "standalone_spam": 0,
+      "standalone_total": 7
+    },
+    {
+      "name": "exmh_footer_email",
+      "pattern": "(?:^|\\n)(?:>\\s*)*Exmh-(?:users|workers)@redhat\\.com[^\\n]*",
+      "sequential_ham": 7,
+      "sequential_spam": 0,
+      "sequential_total": 7,
+      "standalone_ham": 7,
+      "standalone_spam": 0,
+      "standalone_total": 7
+    },
+    {
+      "name": "exmh_footer_url",
+      "pattern": "(?:^|\\n)(?:>\\s*)*https?://listman\\.redhat\\.com/mailman/listinfo/exmh-(?:users|workers)[^\\n]*",
+      "sequential_ham": 7,
+      "sequential_spam": 0,
+      "sequential_total": 7,
+      "standalone_ham": 7,
+      "standalone_spam": 0,
+      "standalone_total": 7
+    },
+    {
+      "name": "yahoo_groups_sponsor_box",
+      "pattern": "-{5,}\\s*Yahoo!\\s*Groups\\s*Sponsor\\s*-+~-+>[\\s\\S]*?-{5,}~-+>",
+      "sequential_ham": 7,
+      "sequential_spam": 0,
+      "sequential_total": 7,
+      "standalone_ham": 7,
+      "standalone_spam": 0,
+      "standalone_total": 7
+    },
+    {
+      "name": "yahoo_groups_unsubscribe",
+      "pattern": "(?:^|\\n)(?:>\\s*)*To unsubscribe from this group,\\s*send an email to:\\s*\\n(?:>\\s*)*forteana-unsubscribe@egroups\\.com[^\\n]*",
+      "sequential_ham": 9,
+      "sequential_spam": 0,
+      "sequential_total": 9,
+      "standalone_ham": 9,
+      "standalone_spam": 0,
+      "standalone_total": 9
+    },
+    {
+      "name": "yahoo_groups_terms",
+      "pattern": "(?:^|\\n)(?:>\\s*)*Your use of Yahoo!\\s*Groups is subject to\\s+https?://docs\\.yahoo\\.com/info/terms/?[^\\n]*",
+      "sequential_ham": 9,
+      "sequential_spam": 0,
+      "sequential_total": 9,
+      "standalone_ham": 9,
+      "standalone_spam": 0,
+      "standalone_total": 9
+    },
+    {
+      "name": "generic_mailman_footer",
+      "pattern": "(?:^|\\n)(?:>\\s*)*_{10,}\\s*\\n(?:>\\s*)*[A-Za-z0-9._-]+\\s+mailing list[^\\n]*(?:\\n(?:>\\s*)*[^\\n]*@[^\\n]*)?\\n(?:>\\s*)*https?://[^\\s]+/(?:mailman|lists)/listinfo/[^\\s]+",
+      "sequential_ham": 1,
+      "sequential_spam": 0,
+      "sequential_total": 1,
+      "standalone_ham": 24,
+      "standalone_spam": 0,
+      "standalone_total": 24
+    },
+    {
+      "name": "fork_listinfo_footer",
+      "pattern": "(?:^|\\n)(?:>\\s*)*https?://xent\\.com/mailman/listinfo/fork[^\\n]*",
+      "sequential_ham": 1,
+      "sequential_spam": 0,
+      "sequential_total": 1,
+      "standalone_ham": 1,
+      "standalone_spam": 0,
+      "standalone_total": 1
+    },
+    {
+      "name": "rss_url_header",
+      "pattern": "(?:^|\\n)(?:>\\s*)*URL:\\s*https?://[^\\n]+",
+      "sequential_ham": 33,
+      "sequential_spam": 0,
+      "sequential_total": 33,
+      "standalone_ham": 33,
+      "standalone_spam": 0,
+      "standalone_total": 33
+    },
+    {
+      "name": "rss_date_header",
+      "pattern": "(?:^|\\n)(?:>\\s*)*Date:\\s*(?:Not supplied|(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun),\\s+\\d{1,2}\\s+\\w{3}\\s+\\d{4}[^\\n]*|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[^\\n]*)",
+      "sequential_ham": 35,
+      "sequential_spam": 0,
+      "sequential_total": 35,
+      "standalone_ham": 35,
+      "standalone_spam": 0,
+      "standalone_total": 35
+    },
+    {
+      "name": "anon_zzzz_taint_email",
+      "pattern": "zzzz@spamassassin\\.taint\\.org",
+      "sequential_ham": 0,
+      "sequential_spam": 6,
+      "sequential_total": 6,
+      "standalone_ham": 0,
+      "standalone_spam": 6,
+      "standalone_total": 6
+    },
+    {
+      "name": "anon_zzzz_other_email",
+      "pattern": "\\bzzzz@[A-Za-z0-9._-]+\\.[A-Za-z]{2,}",
+      "sequential_ham": 0,
+      "sequential_spam": 2,
+      "sequential_total": 2,
+      "standalone_ham": 0,
+      "standalone_spam": 8,
+      "standalone_total": 8
+    },
+    {
+      "name": "anon_spamassassin_taint_domain",
+      "pattern": "(?:zzzz(?:_xy)?)?spamassassin\\.taint\\.org",
+      "sequential_ham": 2,
+      "sequential_spam": 1,
+      "sequential_total": 3,
+      "standalone_ham": 2,
+      "standalone_spam": 7,
+      "standalone_total": 9
+    },
+    {
+      "name": "anon_standalone_zzzz",
+      "pattern": "\\bzzzz\\b",
+      "sequential_ham": 0,
+      "sequential_spam": 2,
+      "sequential_total": 2,
+      "standalone_ham": 0,
+      "standalone_spam": 8,
+      "standalone_total": 8
+    }
+  ],
+  "single_class_tokens_ge_8": [
+    {
+      "doc_count": 36,
+      "examples": [
+        {
+          "context": "... -0700 Ben Liblit <liblit@eecs.berkeley.edu> wrote: > Ick. Perhaps this is why Red Hat turned t...",
+          "message_id": "d5301bdb21faa384"
+        },
+        {
+          "context": "...u, Sep 05, 2002 at 3:55:16PM +0100}, Darragh wrote: > > > Hello, > > > I am very new to Linux a...",
+          "message_id": "52e99a7c2c553b50"
+        }
+      ],
+      "only_class": "ham",
+      "token": "wrote"
+    },
+    {
+      "doc_count": 15,
+      "examples": [
+        {
+          "context": "...solicited emails to those who do not wish to receive our special mailings. You have opted in to o...",
+          "message_id": "5ca18f579faec0e3"
+        },
+        {
+          "context": "...s advertisement because you have opted in to receive free adult internet offers and specials thro...",
+          "message_id": "dd1a9d4a8ab7afdb"
+        }
+      ],
+      "only_class": "spam",
+      "token": "receive"
+    },
+    {
+      "doc_count": 13,
+      "examples": [
+        {
+          "context": "...n though I tried to build them. I started by trying the w3 program. I used the following lines w...",
+          "message_id": "52e99a7c2c553b50"
+        },
+        {
+          "context": "...current code in so long. Now that I have I'm trying to resolve \"breakage\" and differences. The u...",
+          "message_id": "628025470f39fa7d"
+        }
+      ],
+      "only_class": "ham",
+      "token": "trying"
+    },
+    {
+      "doc_count": 12,
+      "examples": [
+        {
+          "context": "...ion on cvs > > > > > > On 0020 +0100 %{!Thu, Sep 05, 2002 at 3:55:16PM +0100}, Darragh wrote:...",
+          "message_id": "52e99a7c2c553b50"
+        },
+        {
+          "context": "...jobs utilized by dot-com workers ... On Mon, Sep 23, 2002 at 04:23:17PM +0100, Gordon Joly wr...",
+          "message_id": "639be331dad56c28"
+        }
+      ],
+      "only_class": "ham",
+      "token": "sep"
+    },
+    {
+      "doc_count": 11,
+      "examples": [
+        {
+          "context": "Man uses cell phone to take snap inside schoolgi...",
+          "message_id": "10eeeb9fb7e8fc05"
+        },
+        {
+          "context": "...to use it. I'll have another look at > > the man pages > > > but I think I have to set it up ...",
+          "message_id": "52e99a7c2c553b50"
+        }
+      ],
+      "only_class": "ham",
+      "token": "man"
+    },
+    {
+      "doc_count": 11,
+      "examples": [
+        {
+          "context": "...ely FREE! -------------------------- Removal Instructions: You have received this advertisement becaus...",
+          "message_id": "dd1a9d4a8ab7afdb"
+        },
+        {
+          "context": "... $12.00. We Send You: E-Z To follow Assembly Instructions E-Z To read Original Drawings. Electronic pa...",
+          "message_id": "ca1392ac4b53091d"
+        }
+      ],
+      "only_class": "spam",
+      "token": "instructions"
+    },
+    {
+      "doc_count": 11,
+      "examples": [
+        {
+          "context": "...those who do not wish to receive our special mailings. You have opted in to one or more of our aff...",
+          "message_id": "5ca18f579faec0e3"
+        },
+        {
+          "context": "... your email address from further promotional mailings from this company, click here: http://www.ce...",
+          "message_id": "538709913c367d14"
+        }
+      ],
+      "only_class": "spam",
+      "token": "mailings"
+    },
+    {
+      "doc_count": 10,
+      "examples": [
+        {
+          "context": "...breakage\" and differences. The unseen window seems to have been replaced with the sequences win...",
+          "message_id": "628025470f39fa7d"
+        },
+        {
+          "context": "...ll become ham on sunday night. (Friday night seems to be the most popular time) > - Your idea h...",
+          "message_id": "7747ca3b82805607"
+        }
+      ],
+      "only_class": "ham",
+      "token": "seems"
+    },
+    {
+      "doc_count": 10,
+      "examples": [
+        {
+          "context": "... MILLION FIVE HUNDRED THOUSAND,UNITED STATES DOLLARS) LEFT IN A SUSPENCE ACCOUNT IN A LOCAL BANK ...",
+          "message_id": "af86e768b8d82afe"
+        },
+        {
+          "context": "...ghts! Produce for pennies and resell for BIG dollars! *BONUS #3 Receive the Mass Mailer bulk deli...",
+          "message_id": "f50ca53652ab448a"
+        }
+      ],
+      "only_class": "spam",
+      "token": "dollars"
+    },
+    {
+      "doc_count": 10,
+      "examples": [
+        {
+          "context": "...inates two levels of hindrance (sourcing and limited opportunities) and provides its customers wi...",
+          "message_id": "1538a13ca53ce49e"
+        },
+        {
+          "context": "...($2.99) for everything!! This offer is for a limited time only! Order Today! Special Offer $2.99 ...",
+          "message_id": "fd88ed38f0e624ac"
+        }
+      ],
+      "only_class": "spam",
+      "token": "limited"
+    },
+    {
+      "doc_count": 10,
+      "examples": [
+        {
+          "context": "...nt 3rd party to overlook list management and removal services. This is NOT unsolicited email. If ...",
+          "message_id": "5ca18f579faec0e3"
+        },
+        {
+          "context": "... absolutely FREE! -------------------------- Removal Instructions: You have received this adverti...",
+          "message_id": "dd1a9d4a8ab7afdb"
+        }
+      ],
+      "only_class": "spam",
+      "token": "removal"
+    },
+    {
+      "doc_count": 9,
+      "examples": [
+        {
+          "context": "RE: Newby to Linux looking for information on cvs Hello all, Fi...",
+          "message_id": "52e99a7c2c553b50"
+        },
+        {
+          "context": "...akdown of their 21-year marriage. > > > -- > Linux User No. 256022/// > http://pobox.com/~gordo...",
+          "message_id": "639be331dad56c28"
+        }
+      ],
+      "only_class": "ham",
+      "token": "linux"
+    },
+    {
+      "doc_count": 9,
+      "examples": [
+        {
+          "context": "...########### # # # Adult Club # # Offers FREE Membership # # # # 3 of the Best Adult Sites # # on the...",
+          "message_id": "5ca18f579faec0e3"
+        },
+        {
+          "context": "... and Animals Getting Freaky....FREE Lifetime Membership!! 6 of the Best Adult Sites on the Internet ...",
+          "message_id": "dd1a9d4a8ab7afdb"
+        }
+      ],
+      "only_class": "spam",
+      "token": "membership"
+    },
+    {
+      "doc_count": 9,
+      "examples": [
+        {
+          "context": "...sh to receive our special mailings. You have opted in to one or more of our affiliate sites req...",
+          "message_id": "5ca18f579faec0e3"
+        },
+        {
+          "context": "...received this advertisement because you have opted in to receive free adult internet offers and...",
+          "message_id": "dd1a9d4a8ab7afdb"
+        }
+      ],
+      "only_class": "spam",
+      "token": "opted"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "...duced some strange results. Would any one be able to set me straight? ./configure --with-emacs...",
+          "message_id": "52e99a7c2c553b50"
+        },
+        {
+          "context": "...ackled this problem before... I'd like to be able to dynamically generate play lists from quer...",
+          "message_id": "d9df281a3909ecaf"
+        }
+      ],
+      "only_class": "ham",
+      "token": "able"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "... identify them, which is not really possible anyway, but hey, this is my rant :-). IMHO. Bill",
+          "message_id": "d9b63893b6c90c4d"
+        },
+        {
+          "context": "... I think I have everything working properly. Anyway I want to install mplayer because I heard it...",
+          "message_id": "9fbdf0473193b3f9"
+        }
+      ],
+      "only_class": "ham",
+      "token": "anyway"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "... this pesky 1st Amendment thing here. Still, lots of us in the States have developed a disturb...",
+          "message_id": "9a1928dc495f23bf"
+        },
+        {
+          "context": "... get big). > ... > How about random sampling lots of public mailing lists via gmane or > somet...",
+          "message_id": "df03267ae2eb6365"
+        }
+      ],
+      "only_class": "ham",
+      "token": "lots"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "...keley.edu> wrote: > Ick. Perhaps this is why Red Hat turned the bytecode interpreter off. > I...",
+          "message_id": "d5301bdb21faa384"
+        },
+        {
+          "context": "...ve binary compatibility for all .x releases. Red Hat > 8.0 has python 2.2 as default. -- \\m/ ...",
+          "message_id": "47fad40273d21892"
+        }
+      ],
+      "only_class": "ham",
+      "token": "red"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "...abled. Remember my stupid request about your RPM ;-) -- Regards from Germany Matthias _______...",
+          "message_id": "d5301bdb21faa384"
+        },
+        {
+          "context": "...yer and dl'd it to /usr/src. I tried to just rpm --rebuild mplayer-20020106-fr1.src.rpm, then...",
+          "message_id": "9fbdf0473193b3f9"
+        }
+      ],
+      "only_class": "ham",
+      "token": "rpm"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "... >C is more reliable than Java?? Depends who writes it. One guy will write a bug every 5 lines, ...",
+          "message_id": "32133aefe6adc1d4"
+        },
+        {
+          "context": "...ption of Racing, reveals little that is new, writes *Greg Wood*.",
+          "message_id": "e7c1df86f46c5a62"
+        }
+      ],
+      "only_class": "ham",
+      "token": "writes"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "...nd family? A. Yes, as long they are over the age of 18. Q. Do I have to sign up for all 3 mem...",
+          "message_id": "5ca18f579faec0e3"
+        },
+        {
+          "context": "...nd family? A. Yes, as long they are over the age of 18. Q. Do I have to sign up for all 6 mem...",
+          "message_id": "dd1a9d4a8ab7afdb"
+        }
+      ],
+      "only_class": "spam",
+      "token": "age"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "...se brand new domain extensions were recently approved by ICANN and have the same rights as the ori...",
+          "message_id": "538709913c367d14"
+        },
+        {
+          "context": "...African mining Corporation.When the claim is approved,you as the beneficiary will be paid (25%) of...",
+          "message_id": "42c757e9c28ba823"
+        }
+      ],
+      "only_class": "spam",
+      "token": "approved"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "...####################### # # # Adult Club # # Offers FREE Membership # # # # 3 of the Best Adult ...",
+          "message_id": "5ca18f579faec0e3"
+        },
+        {
+          "context": "...have opted in to receive free adult internet offers and specials through our affiliated websites...",
+          "message_id": "dd1a9d4a8ab7afdb"
+        }
+      ],
+      "only_class": "spam",
+      "token": "offers"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "...that the advertising industry created a huge opportunity for the company's direct sourcing technology...",
+          "message_id": "1538a13ca53ce49e"
+        },
+        {
+          "context": "...e most rudimentary computer skills. I saw an opportunity and I seized it. A few years later, I bought...",
+          "message_id": "421078261ddc7dd6"
+        }
+      ],
+      "only_class": "spam",
+      "token": "opportunity"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "...el to manage your domain name in the future. Sincerely, Domain Administrator Domains For Everyone T...",
+          "message_id": "538709913c367d14"
+        },
+        {
+          "context": "... USE IT FOR INVESTMENT PURPOSE. PLEASE, I AM SINCERELY ASKING FOR YOUR ASSISTANCE IN THE FOLLOWING ...",
+          "message_id": "af86e768b8d82afe"
+        }
+      ],
+      "only_class": "spam",
+      "token": "sincerely"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "....com/*http://80.71.71.88/celebst/?aid=818932 Thousands Of XXX Celebes doing it...FREE Lifetime Memb...",
+          "message_id": "dd1a9d4a8ab7afdb"
+        },
+        {
+          "context": "...elebes http://80.71.66.8/celebst/?aid=993751 Thousands Of XXX Celebes doing it...FREE Lifetime Memb...",
+          "message_id": "91b37038b2ed2b60"
+        }
+      ],
+      "only_class": "spam",
+      "token": "thousands"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "... Disclaimer: We are strongly against sending unsolicited emails to those who do not wish to receive o...",
+          "message_id": "5ca18f579faec0e3"
+        },
+        {
+          "context": "...02 !!!! Note: This is NOT SPAM!! This is NOT Unsolicited Email!! You are receiving this message becau...",
+          "message_id": "fd88ed38f0e624ac"
+        }
+      ],
+      "only_class": "spam",
+      "token": "unsolicited"
+    },
+    {
+      "doc_count": 8,
+      "examples": [
+        {
+          "context": "...e Alternative: femi1855@aol.com to reply me. Yours faithfully, Egnr. Femi Daniel. NB:Bank Accou...",
+          "message_id": "4f0fb8843596b24a"
+        },
+        {
+          "context": "...ease click below mailto:smokersclub@terra.es Yours faithfully. Smokers Association http://www.s...",
+          "message_id": "3a95f253d32512f6"
+        }
+      ],
+      "only_class": "spam",
+      "token": "yours"
+    }
+  ],
+  "winner_model_type": "logistic_regression",
+  "winner_param": {
+    "C": 10.0
+  },
+  "winner_top_30": {
+    "ham": [
+      {
+        "token": "re",
+        "weight": -1.8262667206174985
+      },
+      {
+        "token": "that",
+        "weight": -1.8167142760353265
+      },
+      {
+        "token": "it",
+        "weight": -1.7266313210705688
+      },
+      {
+        "token": "spam",
+        "weight": -1.1319223095736979
+      },
+      {
+        "token": "is",
+        "weight": -1.08826865023803
+      },
+      {
+        "token": "wrote",
+        "weight": -1.0434440015553235
+      },
+      {
+        "token": "they",
+        "weight": -1.0367932107877478
+      },
+      {
+        "token": "back",
+        "weight": -1.0164274745768553
+      },
+      {
+        "token": "on",
+        "weight": -0.995101552253972
+      },
+      {
+        "token": "but",
+        "weight": -0.992406290077916
+      },
+      {
+        "token": "thanks",
+        "weight": -0.921191458116968
+      },
+      {
+        "token": "the",
+        "weight": -0.908304604519814
+      },
+      {
+        "token": "like",
+        "weight": -0.7676696278370194
+      },
+      {
+        "token": "say",
+        "weight": -0.7528007325788604
+      },
+      {
+        "token": "would",
+        "weight": -0.7492052218136748
+      },
+      {
+        "token": "cvs",
+        "weight": -0.7460131846788118
+      },
+      {
+        "token": "big",
+        "weight": -0.719580318420127
+      },
+      {
+        "token": "some",
+        "weight": -0.6964084302897607
+      },
+      {
+        "token": "server",
+        "weight": -0.6890398513999632
+      },
+      {
+        "token": "another",
+        "weight": -0.6567490517847301
+      },
+      {
+        "token": "rpm",
+        "weight": -0.6517553089741357
+      },
+      {
+        "token": "<NUM>",
+        "weight": -0.6513017178727256
+      },
+      {
+        "token": "img",
+        "weight": -0.6448414154427617
+      },
+      {
+        "token": "doesn",
+        "weight": -0.6410661588243942
+      },
+      {
+        "token": "was",
+        "weight": -0.638984000350898
+      },
+      {
+        "token": "them",
+        "weight": -0.6339549805580823
+      },
+      {
+        "token": "exmh",
+        "weight": -0.6283517445654819
+      },
+      {
+        "token": "window",
+        "weight": -0.6234648208321052
+      },
+      {
+        "token": "linux",
+        "weight": -0.6188193614959706
+      },
+      {
+        "token": "david",
+        "weight": -0.6174161220505059
+      }
+    ],
+    "spam": [
+      {
+        "token": "<CAPS>",
+        "weight": 5.156696241841312
+      },
+      {
+        "token": "<EXCLAM>",
+        "weight": 4.072982977376191
+      },
+      {
+        "token": "you",
+        "weight": 3.448577053739643
+      },
+      {
+        "token": "your",
+        "weight": 2.9788856636411523
+      },
+      {
+        "token": "our",
+        "weight": 2.536562455682258
+      },
+      {
+        "token": "<MONEY>",
+        "weight": 2.514588190044096
+      },
+      {
+        "token": "we",
+        "weight": 2.218624481509105
+      },
+      {
+        "token": "free",
+        "weight": 1.9438859373114756
+      },
+      {
+        "token": "please",
+        "weight": 1.8182569290593602
+      },
+      {
+        "token": "br",
+        "weight": 1.7503365119257661
+      },
+      {
+        "token": "money",
+        "weight": 1.6615222225022852
+      },
+      {
+        "token": "will",
+        "weight": 1.6256847731050954
+      },
+      {
+        "token": "vip",
+        "weight": 1.5456068407229067
+      },
+      {
+        "token": "click",
+        "weight": 1.4989478305506112
+      },
+      {
+        "token": "market",
+        "weight": 1.4970561710673702
+      },
+      {
+        "token": "domain",
+        "weight": 1.452523315805327
+      },
+      {
+        "token": "drive",
+        "weight": 1.444263737835195
+      },
+      {
+        "token": "ne",
+        "weight": 1.420282956701986
+      },
+      {
+        "token": "su",
+        "weight": 1.399269183678649
+      },
+      {
+        "token": "investment",
+        "weight": 1.3657732996172116
+      },
+      {
+        "token": "per",
+        "weight": 1.354621160024728
+      },
+      {
+        "token": "poker",
+        "weight": 1.349825547654447
+      },
+      {
+        "token": "visit",
+        "weight": 1.33976852810671
+      },
+      {
+        "token": "access",
+        "weight": 1.2710211651825478
+      },
+      {
+        "token": "membership",
+        "weight": 1.233798538448052
+      },
+      {
+        "token": "rates",
+        "weight": 1.1947389357621288
+      },
+      {
+        "token": "numbers",
+        "weight": 1.1659294346241587
+      },
+      {
+        "token": "from",
+        "weight": 1.0903350592592687
+      },
+      {
+        "token": "email",
+        "weight": 1.0524901943720684
+      },
+      {
+        "token": "no",
+        "weight": 1.051079321963241
+      }
+    ]
+  }
+}
