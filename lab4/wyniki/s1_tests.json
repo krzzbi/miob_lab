@@ -1,0 +1,121 @@
+{
+  "check": "S1",
+  "description": "Uruchomienie 20 testow unittest z lab3/project z PYTHONDONTWRITEBYTECODE=1 i -B",
+  "expected": {
+    "returncode": 0,
+    "ran_count": 20,
+    "ok": 20,
+    "fail": 0,
+    "error": 0,
+    "skipped": 0
+  },
+  "command": [
+    "/Users/jasminetea/.pyenv/versions/3.12.1/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-t",
+    ".",
+    "-v"
+  ],
+  "cwd": "lab3/project",
+  "python_version": "3.12.1 (main, Jun 29 2026, 23:57:21) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "returncode": 0,
+  "wall_seconds": 34.307,
+  "parsed": {
+    "ran_count": 20,
+    "unittest_reported_seconds": 34.162,
+    "ok": 20,
+    "fail": 0,
+    "error": 0,
+    "skipped": 0,
+    "tests": [
+      {
+        "name": "test_cv_fold_tfidf_isolation_no_leakage (tests.test_cv_pipeline.TestCvPipeline.test_cv_fold_tfidf_isolation_no_leakage)",
+        "status": "ok"
+      },
+      {
+        "name": "test_cv_train_threshold_optimality_reproducibility_and_speed (tests.test_cv_pipeline.TestCvPipeline.test_cv_train_threshold_optimality_reproducibility_and_speed)",
+        "status": "ok"
+      },
+      {
+        "name": "test_stratified_kfold_structure_and_determinism (tests.test_cv_pipeline.TestCvPipeline.test_stratified_kfold_structure_and_determinism)",
+        "status": "ok"
+      },
+      {
+        "name": "test_frozen_models_sha256_unchanged (tests.test_end_to_end.TestEndToEndReproducibility.test_frozen_models_sha256_unchanged)",
+        "status": "ok"
+      },
+      {
+        "name": "test_two_full_runs_produce_identical_models_and_predictions (tests.test_end_to_end.TestEndToEndReproducibility.test_two_full_runs_produce_identical_models_and_predictions)",
+        "status": "ok"
+      },
+      {
+        "name": "test_save_and_reload_without_training_for_both_models (tests.test_models_metrics.TestJsonArtifactRoundTrip.test_save_and_reload_without_training_for_both_models)",
+        "status": "ok"
+      },
+      {
+        "name": "test_solver_speed_on_realistic_size (tests.test_models_metrics.TestJsonArtifactRoundTrip.test_solver_speed_on_realistic_size)",
+        "status": "ok"
+      },
+      {
+        "name": "test_gradient_matches_finite_differences (tests.test_models_metrics.TestLogisticRegressionL2.test_gradient_matches_finite_differences)",
+        "status": "ok"
+      },
+      {
+        "name": "test_kkt_optimality_regularization_monotonicity_and_separation (tests.test_models_metrics.TestLogisticRegressionL2.test_kkt_optimality_regularization_monotonicity_and_separation)",
+        "status": "ok"
+      },
+      {
+        "name": "test_hand_calculated_metrics_and_pr_auc (tests.test_models_metrics.TestMetricsAndThreshold.test_hand_calculated_metrics_and_pr_auc)",
+        "status": "ok"
+      },
+      {
+        "name": "test_select_threshold_rule_and_midpoint (tests.test_models_metrics.TestMetricsAndThreshold.test_select_threshold_rule_and_midpoint)",
+        "status": "ok"
+      },
+      {
+        "name": "test_hand_calculated_probabilities (tests.test_models_metrics.TestMultinomialNaiveBayes.test_hand_calculated_probabilities)",
+        "status": "ok"
+      },
+      {
+        "name": "test_predict_subprocess_without_label_matches_in_memory_and_handles_shuffling (tests.test_predict_evaluate.TestPredictAndEvaluate.test_predict_subprocess_without_label_matches_in_memory_and_handles_shuffling)",
+        "status": "ok"
+      },
+      {
+        "name": "test_validation_matrix_sums_and_baselines (tests.test_predict_evaluate.TestPredictAndEvaluate.test_validation_matrix_sums_and_baselines)",
+        "status": "ok"
+      },
+      {
+        "name": "test_hand_calculated_tokens_and_tfidf (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_hand_calculated_tokens_and_tfidf)",
+        "status": "ok"
+      },
+      {
+        "name": "test_load_csv_without_label_column (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_load_csv_without_label_column)",
+        "status": "ok"
+      },
+      {
+        "name": "test_masking_pattern_coverage_remnants_and_stems_on_train (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_masking_pattern_coverage_remnants_and_stems_on_train)",
+        "status": "ok"
+      },
+      {
+        "name": "test_masking_preserves_spam_remove_and_removes_source_artifacts_on_train (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_masking_preserves_spam_remove_and_removes_source_artifacts_on_train)",
+        "status": "ok"
+      },
+      {
+        "name": "test_tfidf_no_leakage_and_json_roundtrip (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_tfidf_no_leakage_and_json_roundtrip)",
+        "status": "ok"
+      },
+      {
+        "name": "test_train_csv_sha256_unchanged (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_train_csv_sha256_unchanged)",
+        "status": "ok"
+      }
+    ]
+  },
+  "passed": true,
+  "stdout": "",
+  "stderr": "test_cv_fold_tfidf_isolation_no_leakage (tests.test_cv_pipeline.TestCvPipeline.test_cv_fold_tfidf_isolation_no_leakage)\nSprawdzenie (b): slownik i IDF w kazdym foldzie CV pochodza tylko z 144 wiadomosci uczacych. ... ok\ntest_cv_train_threshold_optimality_reproducibility_and_speed (tests.test_cv_pipeline.TestCvPipeline.test_cv_train_threshold_optimality_reproducibility_and_speed)\nSprawdzenia (d) i (e): optymalnosc progu niezalezna petla, powtarzalnosc bajt-w-bajt, czas < 30s. ... ok\ntest_stratified_kfold_structure_and_determinism (tests.test_cv_pipeline.TestCvPipeline.test_stratified_kfold_structure_and_determinism)\n5 rozlacznych foldow po 36 wiadomosci (24 ham, 12 spam), deterministyczne dla ziarna 2026. ... ok\ntest_frozen_models_sha256_unchanged (tests.test_end_to_end.TestEndToEndReproducibility.test_frozen_models_sha256_unchanged)\nSprawdza, ze zapisane modele w project/models/ maja te same SHA-256 co przed otwarciem validation.csv. ... ok\ntest_two_full_runs_produce_identical_models_and_predictions (tests.test_end_to_end.TestEndToEndReproducibility.test_two_full_runs_produce_identical_models_and_predictions)\nSprawdzenie (e): dwa pelne przebiegi daja identyczne pliki modelu i przewidywan, data/ bez zmian. ... ok\ntest_save_and_reload_without_training_for_both_models (tests.test_models_metrics.TestJsonArtifactRoundTrip.test_save_and_reload_without_training_for_both_models)\nPo zapisie i wczytaniu z JSON oceny sa identyczne (< 1e-12) bez ponownego uczenia. ... ok\ntest_solver_speed_on_realistic_size (tests.test_models_metrics.TestJsonArtifactRoundTrip.test_solver_speed_on_realistic_size)\nKontrola szybkosci i zbieznosci solvera Newton-Woodbury na rozmiarze train (180x2637). ... ok\ntest_gradient_matches_finite_differences (tests.test_models_metrics.TestLogisticRegressionL2.test_gradient_matches_finite_differences)\nPorownuje gradient analityczny regresji L2 z roznicami skonczonymi. ... ok\ntest_kkt_optimality_regularization_monotonicity_and_separation (tests.test_models_metrics.TestLogisticRegressionL2.test_kkt_optimality_regularization_monotonicity_and_separation)\nPo dopasowaniu ||grad|| < 1e-6, mniejsze C zmniejsza ||w||_2, a klasy sa rozdzielone. ... ok\ntest_hand_calculated_metrics_and_pr_auc (tests.test_models_metrics.TestMetricsAndThreshold.test_hand_calculated_metrics_and_pr_auc)\nRecznie sprawdzona macierz pomylek, miary i Average Precision. ... ok\ntest_select_threshold_rule_and_midpoint (tests.test_models_metrics.TestMetricsAndThreshold.test_select_threshold_rule_and_midpoint)\nSprawdza regule doboru progu (maks. TP przy FP <= max_fp, mniej FP, srodek przedzialu). ... ok\ntest_hand_calculated_probabilities (tests.test_models_metrics.TestMultinomialNaiveBayes.test_hand_calculated_probabilities)\nPorownuje wielomianowy Naiwny Bayes z recznym wyliczeniem na 2 klasach i 3 slowach. ... ok\ntest_predict_subprocess_without_label_matches_in_memory_and_handles_shuffling (tests.test_predict_evaluate.TestPredictAndEvaluate.test_predict_subprocess_without_label_matches_in_memory_and_handles_shuffling)\nSprawdzenie (a): osobny proces na CSV bez label daje oceny zgodne < 1e-12 i niezalezne od kolejnosci. ... ok\ntest_validation_matrix_sums_and_baselines (tests.test_predict_evaluate.TestPredictAndEvaluate.test_validation_matrix_sums_and_baselines)\nSprawdzenie (f): macierz pomylek 60 = 40 + 20, 'zawsze ham' = 40/60, niezalezne zliczenie reguly. ... ok\ntest_hand_calculated_tokens_and_tfidf (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_hand_calculated_tokens_and_tfidf)\nSprawdza dokladne tokeny i recznie policzone wartosci TF-IDF na 3 dokumentach. ... ok\ntest_load_csv_without_label_column (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_load_csv_without_label_column)\nload_csv(include_label=False) nie wymaga ani nie czyta kolumny label. ... ok\ntest_masking_pattern_coverage_remnants_and_stems_on_train (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_masking_pattern_coverage_remnants_and_stems_on_train)\nDodatkowe sprawdzenia maskowania (2a, 2b, 2c): pokrycie wzorcow, 0 pozostalosci, odmiany. ... ok\ntest_masking_preserves_spam_remove_and_removes_source_artifacts_on_train (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_masking_preserves_spam_remove_and_removes_source_artifacts_on_train)\nSprawdzenie (c): maskowanie zachowuje 'remove' w spamie z train i usuwa artefakty. ... ok\ntest_tfidf_no_leakage_and_json_roundtrip (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_tfidf_no_leakage_and_json_roundtrip)\nSlownik i IDF pochodza tylko ze zbioru A; zapis/odczyt JSON zachowuje wektory. ... ok\ntest_train_csv_sha256_unchanged (tests.test_preprocess_tfidf.TestPreprocessAndTfidf.test_train_csv_sha256_unchanged)\nSprawdza niezmiennosc train.csv wzgledem manifest.json (bez otwierania validation.csv). ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 34.162s\n\nOK\n"
+}

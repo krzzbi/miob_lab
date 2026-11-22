@@ -1,0 +1,47 @@
+{
+  "check": "S4",
+  "description": "Spojnosc predicted_label z (score >= threshold z JSON) dla obu modeli",
+  "expected": {
+    "n_mismatches_main": 0,
+    "n_mismatches_alternative": 0
+  },
+  "selected_model": {
+    "predictions_csv": "lab3/project/results/validation_predictions.csv",
+    "model_json": "lab3/project/models/spam_classifier.json",
+    "threshold": 0.3289945016365051,
+    "n_rows": 60,
+    "n_mismatches": 0,
+    "mismatches": [],
+    "n_non_finite_or_oob": 0,
+    "min_margin_to_threshold": 0.11166590633977946,
+    "closest_to_threshold": {
+      "message_id": "017f0817d4c92951",
+      "score": 0.21732859529672566,
+      "predicted_label": "ham",
+      "abs_margin": 0.11166590633977946
+    },
+    "max_predicted_ham_score": 0.21732859529672566,
+    "min_predicted_spam_score": 0.5409128824241788,
+    "passed": true
+  },
+  "alternative_model": {
+    "predictions_csv": "lab3/project/results/validation_predictions_alternative.csv",
+    "model_json": "lab3/project/models/alternative_model.json",
+    "threshold": 0.5803936420655288,
+    "n_rows": 60,
+    "n_mismatches": 0,
+    "mismatches": [],
+    "n_non_finite_or_oob": 0,
+    "min_margin_to_threshold": 0.16429969850521348,
+    "closest_to_threshold": {
+      "message_id": "18b1ae26914662c5",
+      "score": 0.4160939435603153,
+      "predicted_label": "ham",
+      "abs_margin": 0.16429969850521348
+    },
+    "max_predicted_ham_score": 0.4160939435603153,
+    "min_predicted_spam_score": 0.766569891179973,
+    "passed": true
+  },
+  "passed": true
+}

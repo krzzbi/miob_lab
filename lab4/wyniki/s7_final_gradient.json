@@ -1,0 +1,38 @@
+{
+  "check": "S7",
+  "description": "Norma gradientu koncowego modelu (spam_classifier.json) na calym train.csv",
+  "expected": {
+    "grad_l2_norm_lt": 1e-06
+  },
+  "model_params": {
+    "model_type": "logistic_regression",
+    "C": 10.0,
+    "n_features": 2632,
+    "n_train_docs": 180,
+    "intercept": -2.3818632046630768,
+    "weights_l2_norm": 17.147752337767027
+  },
+  "tfidf_vector_max_abs_diff_vs_project": 1.2212453270876722e-15,
+  "independent_formula": {
+    "loss": 28.598173108782078,
+    "grad_l2_norm": 8.111010604229317e-13,
+    "grad_max_abs": 7.410122862538948e-13,
+    "grad_intercept": 5.710709682915649e-14
+  },
+  "project_objective_and_gradient": {
+    "loss": 28.598173108782085,
+    "grad_l2_norm": 8.11758118562121e-13,
+    "grad_max_abs": 7.418518924162676e-13,
+    "grad_intercept": 5.6746274346153314e-14
+  },
+  "comparison_independent_vs_project": {
+    "loss_abs_diff": 7.105427357601002e-15,
+    "grad_l2_abs_diff": 6.57058139189376e-16
+  },
+  "what_s7_does_not_cover": [
+    "Przetwarzanie tekstu (maskowanie i tokenizacja) pochodzi z kodu projektu (src/preprocess.py), wiec S7 weryfikuje zbieznosc optymalizacji regresji L2 dla tej macierzy X, a nie poprawnosc samej tokenizacji ani maskowania.",
+    "Nie weryfikuje wyboru hiperparametru C ani progu decyzji (to dotyczy CV, a nie minimum funkcji celu na calym train).",
+    "Nie dotyczy modelu alternatywnego (MultinomialNaiveBayes nie uzywa optymalizacji gradientowej)."
+  ],
+  "passed": true
+}

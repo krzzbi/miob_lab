@@ -1,0 +1,106 @@
+{
+  "check": "S6",
+  "description": "Porownanie sekcji preprocessing w obu plikach JSON z preprocess.py oraz sprawdzenie samowystarczalnosci from_dict()",
+  "spam_classifier": {
+    "model_file": "lab3/project/models/spam_classifier.json",
+    "exact_match_with_get_preprocessing_spec": true,
+    "field_checks": {
+      "version_match": true,
+      "apply_masking_match": true,
+      "steps_order_match": true,
+      "subject_prefix_match": true,
+      "subject_tag_patterns_match": true,
+      "body_masking_patterns_match": true,
+      "special_tokens_match": true,
+      "min_word_len_match": true,
+      "n_subject_tag_patterns": 1,
+      "n_body_masking_patterns": 23
+    },
+    "from_dict_ignores_mutated_json_patterns": true,
+    "mutation_probe_scores": {
+      "original_json_score": 0.05581286392028287,
+      "mutated_json_score": 0.05581286392028287,
+      "original_label": "ham",
+      "mutated_label": "ham"
+    }
+  },
+  "alternative_model": {
+    "model_file": "lab3/project/models/alternative_model.json",
+    "exact_match_with_get_preprocessing_spec": true,
+    "field_checks": {
+      "version_match": true,
+      "apply_masking_match": true,
+      "steps_order_match": true,
+      "subject_prefix_match": true,
+      "subject_tag_patterns_match": true,
+      "body_masking_patterns_match": true,
+      "special_tokens_match": true,
+      "min_word_len_match": true,
+      "n_subject_tag_patterns": 1,
+      "n_body_masking_patterns": 23
+    },
+    "from_dict_ignores_mutated_json_patterns": true,
+    "mutation_probe_scores": {
+      "original_json_score": 0.07808497158669911,
+      "mutated_json_score": 0.07808497158669911,
+      "original_label": "ham",
+      "mutated_label": "ham"
+    }
+  },
+  "both_models_json_matches_preprocess_py": true,
+  "both_models_from_dict_ignores_json_patterns": true,
+  "tokenization_regexes_missing_from_json": {
+    "_URL_RE": "(?:https?://|ftp://|www\\.)[^\\s<>'\\\"()\\[\\]]+",
+    "_EMAIL_RE": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b",
+    "_MONEY_RE": "(?:(?:US\\$|USD|EUR|GBP|[\\$£€])\\s*\\d[\\d,]*(?:\\.\\d+)?(?:\\s*(?:million|billion|thousand))?|\\b\\d[\\d,]*(?:\\.\\d+)?\\s*(?:[\\$£€]|USD|EUR|GBP|dollars?|cents?)\\b)",
+    "_NUM_RE": "\\b\\d+(?:[.,:/-]\\d+)*\\b",
+    "_CAPS_RE": "\\b[A-Z]{3,}\\b",
+    "_EXCLAM_RE": "!",
+    "_TOKEN_RE": "<(?:caps|exclam|url|email|money|num)>|[a-z]{2,}"
+  },
+  "from_dict_source": "    @classmethod\n    def from_dict(cls, data: Dict[str, object]) -> \"SpamClassifierArtifact\":\n        prep = data[\"preprocessing\"]  # type: ignore[index]\n        apply_masking = bool(prep.get(\"apply_masking\", True))  # type: ignore[union-attr]\n        vectorizer = TfidfVectorizer.from_dict(data[\"tfidf\"])  # type: ignore[arg-type]\n        model_data = data[\"model\"]  # type: ignore[index]\n        mtype = model_data[\"model_type\"]  # type: ignore[index]\n        if mtype == \"logistic_regression\":\n            model: ModelType = LogisticRegressionL2.from_dict(model_data)  # type: ignore[arg-type]\n        elif mtype == \"multinomial_nb\":\n            model = MultinomialNaiveBayes.from_dict(model_data)  # type: ignore[arg-type]\n        else:\n            raise ValueError(f\"Nieznany typ modelu w JSON: {mtype!r}\")\n        return cls(\n            vectorizer=vectorizer,\n            model=model,\n            threshold=float(data[\"threshold\"]),\n            apply_masking=apply_masking,\n        )\n",
+  "documentation_and_code_claims": [
+    {
+      "file": "lab3/project/README.md",
+      "lines": {
+        "27": "  - `models/spam_classifier.json` — wybrany model (`logistic_regression`, `C=10.0`, próg `0.328995`) wraz z regułami przetwarzania, słownikiem i wagami IDF,",
+        "28": "  - `models/alternative_model.json` — model alternatywny (`multinomial_nb`, `alpha=0.1`, próg `0.580394`)."
+      }
+    },
+    {
+      "file": "lab3/project/results/summary.md",
+      "lines": {
+        "5": "- **Wybrany model:** Regresja logistyczna L2 (`C = 10.0`), próg OOF = `0.328995`, słownik na całym `train.csv` (`min_df=2`): `2632` tokenów."
+      }
+    },
+    {
+      "file": "lab3/project/src/models.py",
+      "lines": {
+        "399": "class SpamClassifierArtifact:",
+        "400": "    \"\"\"Kompletny, serializowalny artefakt klasyfikatora do uzycia bez ponownego uczenia.\"\"\"",
+        "472": "    @classmethod",
+        "473": "    def from_dict(cls, data: Dict[str, object]) -> \"SpamClassifierArtifact\":",
+        "474": "        prep = data[\"preprocessing\"]  # type: ignore[index]",
+        "475": "        apply_masking = bool(prep.get(\"apply_masking\", True))  # type: ignore[union-attr]"
+      }
+    },
+    {
+      "file": "lab3/project/src/predict.py",
+      "lines": {
+        "1": "\"\"\"Czesc 4: Niezalezny skrypt przewidujacy korzystajacy wylacznie z zapisanego pliku JSON.",
+        "2": "",
+        "3": "Skrypt NIGDY nie odczytuje kolumny 'label' (ani nie wymaga jej obecnosci w CSV).",
+        "64": "        description=\"Przewidywanie spamu z zapisanego pliku JSON (bez czytania kolumny label).\""
+      }
+    },
+    {
+      "file": "lab3/project/src/preprocess.py",
+      "lines": {
+        "163": "def get_preprocessing_spec(*, apply_masking: bool = True) -> Dict[str, object]:",
+        "164": "    \"\"\"Zwraca jawny, serializowalny opis regul przetwarzania w ustalonej kolejnosci.\"\"\""
+      }
+    }
+  ],
+  "classification_per_criteria": "OGRANICZENIE (wplyw N) — zapisane pola JSON zgadzaja sie ze stalymi w preprocess.py, ale from_dict() ich nie wykonuje (czyta tylko apply_masking), a regexy tokenizacji nie sa zapisane w JSON.",
+  "passed": true
+}

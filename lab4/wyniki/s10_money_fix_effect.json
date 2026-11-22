@@ -1,0 +1,326 @@
+{
+  "check": "S10",
+  "description": "Skutek probnej poprawki U1 (_MONEY_RE) w kopii lab4/proby/v2/ vs Lab 3",
+  "patch_applied_in_v2_only": {
+    "old": "_MONEY_RE = re.compile(\n    r\"(?:(?:US\\$|USD|EUR|GBP|[\\$£€])\\s*\\d[\\d,]*(?:\\.\\d+)?(?:\\s*(?:million|billion|thousand))?\"\n    r\"|\\b\\d[\\d,]*(?:\\.\\d+)?\\s*(?:[\\$£€]|USD|EUR|GBP|dollars?|cents?)\\b)\",\n    flags=re.IGNORECASE,\n)",
+    "new": "_MONEY_RE = re.compile(\n    r\"(?:(?:US\\$|USD|EUR|GBP|[\\$£€])\\s*\\d[\\d,]*(?:\\.\\d+)?(?:\\s*(?:million|billion|thousand))?\"\n    r\"|\\b\\d[\\d,]*(?:\\.\\d+)?\\s*(?:[\\$£€]|(?:USD|EUR|GBP|dollars?|cents?)\\b))\",\n    flags=re.IGNORECASE,\n)"
+  },
+  "synthetic_tests": {
+    "suffix_currency_cases": [
+      {
+        "input": "Subject: Offer 100$ now",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "offer",
+          "<NUM>",
+          "now"
+        ],
+        "v2_tokens": [
+          "offer",
+          "<MONEY>",
+          "now"
+        ],
+        "passed": true
+      },
+      {
+        "input": "Subject: Win 100.000$ today",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "win",
+          "<NUM>",
+          "today"
+        ],
+        "v2_tokens": [
+          "win",
+          "<MONEY>",
+          "today"
+        ],
+        "passed": true
+      },
+      {
+        "input": "Subject: Pay 50 € now",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "pay",
+          "<NUM>",
+          "now"
+        ],
+        "v2_tokens": [
+          "pay",
+          "<MONEY>",
+          "now"
+        ],
+        "passed": true
+      },
+      {
+        "input": "Subject: Cost 25£ only",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "cost",
+          "<NUM>",
+          "only"
+        ],
+        "v2_tokens": [
+          "cost",
+          "<MONEY>",
+          "only"
+        ],
+        "passed": true
+      }
+    ],
+    "existing_money_cases": [
+      {
+        "input": "Subject: Price $100 today",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "price",
+          "<MONEY>",
+          "today"
+        ],
+        "v2_tokens": [
+          "price",
+          "<MONEY>",
+          "today"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      },
+      {
+        "input": "Subject: Only $14.95 now",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "only",
+          "<MONEY>",
+          "now"
+        ],
+        "v2_tokens": [
+          "only",
+          "<MONEY>",
+          "now"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      },
+      {
+        "input": "Subject: Pay US$ 100 immediately",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "pay",
+          "<MONEY>",
+          "immediately"
+        ],
+        "v2_tokens": [
+          "pay",
+          "<MONEY>",
+          "immediately"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      },
+      {
+        "input": "Subject: Earn 100 dollars fast",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "earn",
+          "<MONEY>",
+          "fast"
+        ],
+        "v2_tokens": [
+          "earn",
+          "<MONEY>",
+          "fast"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      },
+      {
+        "input": "Subject: Send USD 50 here",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "send",
+          "<MONEY>",
+          "here"
+        ],
+        "v2_tokens": [
+          "send",
+          "<MONEY>",
+          "here"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      },
+      {
+        "input": "Subject: Total 20 USD due",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "total",
+          "<MONEY>",
+          "due"
+        ],
+        "v2_tokens": [
+          "total",
+          "<MONEY>",
+          "due"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      },
+      {
+        "input": "Subject: Fee £50 applied",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "fee",
+          "<MONEY>",
+          "applied"
+        ],
+        "v2_tokens": [
+          "fee",
+          "<MONEY>",
+          "applied"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      },
+      {
+        "input": "Subject: Only 50 cents each",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "only",
+          "<MONEY>",
+          "each"
+        ],
+        "v2_tokens": [
+          "only",
+          "<MONEY>",
+          "each"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      },
+      {
+        "input": "Subject: Cost EUR 20 net",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "cost",
+          "<MONEY>",
+          "net"
+        ],
+        "v2_tokens": [
+          "cost",
+          "<MONEY>",
+          "net"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      },
+      {
+        "input": "Subject: Win $5 million now",
+        "expected_contains": "<MONEY>",
+        "orig_tokens": [
+          "win",
+          "<MONEY>",
+          "now"
+        ],
+        "v2_tokens": [
+          "win",
+          "<MONEY>",
+          "now"
+        ],
+        "identical_to_orig": true,
+        "passed": true
+      }
+    ],
+    "all_passed": true
+  },
+  "token_list_changes": {
+    "train": {
+      "n_total_messages": 180,
+      "n_changed_messages": 1,
+      "changed_messages": [
+        {
+          "message_id": "52c16dcd1605d5e8",
+          "label": "spam",
+          "orig_money_count": 27,
+          "v2_money_count": 28,
+          "orig_num_count": 133,
+          "v2_num_count": 132,
+          "orig_len": 2900,
+          "v2_len": 2900
+        }
+      ]
+    },
+    "validation": {
+      "n_total_messages": 60,
+      "n_changed_messages": 0,
+      "changed_messages": []
+    }
+  },
+  "expected_token_changes_match": true,
+  "v2_run_wall_seconds": 9.4129,
+  "comparison_lab3_vs_v2": {
+    "lab3": {
+      "model_type": "logistic_regression",
+      "param": {
+        "C": 10.0
+      },
+      "threshold": 0.3289945016365051,
+      "full_vocab_size": 2632,
+      "cv_cm": {
+        "fn": 2,
+        "fp": 3,
+        "tn": 117,
+        "tp": 58
+      },
+      "cv_pr_auc": 0.990997880669902
+    },
+    "v2": {
+      "model_type": "logistic_regression",
+      "param": {
+        "C": 10.0
+      },
+      "threshold": 0.3290080664003377,
+      "full_vocab_size": 2632,
+      "cv_cm": {
+        "fn": 2,
+        "fp": 3,
+        "tn": 117,
+        "tp": 58
+      },
+      "cv_pr_auc": 0.990997880669902
+    },
+    "same_model_and_param": true,
+    "same_cv_tp_fp": true,
+    "threshold_diff": 1.3564763832574211e-05,
+    "vocab_size_diff": 0,
+    "cv_pr_auc_diff": 0.0,
+    "cv_max_oof_score_diff": 0.0006999317571796393,
+    "affected_train_msg_oof": {
+      "message_id": "52c16dcd1605d5e8",
+      "lab3_oof_score": 0.9258427338871369,
+      "v2_oof_score": 0.9265426656443165,
+      "diff": 0.0006999317571796393
+    },
+    "validation_diagnostic": {
+      "lab3_cm": {
+        "fn": 1,
+        "fp": 0,
+        "tn": 40,
+        "tp": 19
+      },
+      "v2_cm": {
+        "fn": 1,
+        "fp": 0,
+        "tn": 40,
+        "tp": 19
+      },
+      "n_changed_decisions": 0,
+      "changed_decisions": [],
+      "max_abs_score_diff": 5.908522312181308e-05,
+      "max_abs_score_diff_message_id": "d52481af2cae9d6f"
+    }
+  },
+  "criteria_result": {
+    "no_decision_change": true,
+    "classification": "POTWIERDZONY BLAD, wplyw W (bez zmiany decyzji)"
+  }
+}

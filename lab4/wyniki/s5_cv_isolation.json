@@ -1,0 +1,96 @@
+{
+  "check": "S5",
+  "description": "Izolacja slownika i IDF w produkcyjnym evaluate_candidate_cv() i run_cv_and_train()",
+  "sentinel_checks": {
+    "sentinel": "zqxsentinelzqx",
+    "is_lowercase_alpha": true,
+    "masking_patterns_matching_sentinel": [],
+    "survives_masking_and_tokenization": true,
+    "already_present_in_original_train": false,
+    "n_modified_docs_per_scenario": 3,
+    "val_only_fold1_message_ids": [
+      "bac28e58c42fa5f6",
+      "538709913c367d14",
+      "741d801782ff4010"
+    ],
+    "train_part_fold1_message_ids": [
+      "c69499c749040caa",
+      "4f0fb8843596b24a",
+      "d9df281a3909ecaf"
+    ],
+    "fold_assignment_identical_scenario_a": true,
+    "fold_assignment_identical_scenario_b": true
+  },
+  "method_1_black_box_run_cv_and_train": {
+    "base_fold_vocab_sizes": [
+      2227,
+      2266,
+      2010,
+      2242,
+      2268
+    ],
+    "scenario_a_val_only_fold1": {
+      "fold_vocab_sizes": [
+        2227,
+        2267,
+        2011,
+        2243,
+        2269
+      ],
+      "fold1_vocab_delta": 0,
+      "fold1_max_oof_score_diff": 0.0,
+      "folds_2_to_5_vocab_deltas": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "scenario_b_train_part_fold1": {
+      "fold_vocab_sizes": [
+        2228,
+        2266,
+        2011,
+        2243,
+        2269
+      ],
+      "fold1_vocab_delta": 1,
+      "fold2_vocab_delta": 0,
+      "fold2_max_oof_score_diff": 0.0
+    },
+    "full_train_vocab_sizes": {
+      "base": 2632,
+      "scenario_a": 2633,
+      "scenario_b": 2633
+    }
+  },
+  "method_2_captured_vectorizer_evaluate_candidate_cv": {
+    "note": "Tymczasowe owiniecie cv_train.TfidfVectorizer w pamieci bez modyfikacji plikow w lab3/.",
+    "scenario_a_val_only_fold1": {
+      "fold1_has_sentinel": false,
+      "fold1_vocab_identical_to_base": true,
+      "fold1_idf_identical_to_base": true,
+      "fold1_max_oof_score_diff": 0.0,
+      "folds_2_to_5_have_sentinel": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "scenario_b_train_part_fold1": {
+      "fold1_has_sentinel": true,
+      "fold1_vocab_delta": 1,
+      "fold2_has_sentinel": false,
+      "fold2_vocab_identical_to_base": true,
+      "fold2_idf_identical_to_base": true,
+      "fold2_max_oof_score_diff": 0.0
+    }
+  },
+  "what_s5_does_not_cover": [
+    "Nie sprawdza potencjalnego wycieku na etapie recznego ustalania wzorcow maskowania przed CV (wzorce sa stale i ustalone na calym train.csv, nie wewnatrz foldow CV).",
+    "Nie testuje bezposrednio pozostalych kandydatow z siatki w Metodzie 2 (sprawdzono dla wybranego C=10.0, a w Metodzie 1 caly run_cv_and_train); wszystkie korzystaja z tej samej funkcji evaluate_candidate_cv().",
+    "Metoda 2 wykorzystuje podmiane referencji cv_train.TfidfVectorizer w pamieci (choc Metoda 1 weryfikuje izolacje bez zadnej podmiany)."
+  ],
+  "passed": true
+}

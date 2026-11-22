@@ -1,0 +1,2920 @@
+{
+  "check": "S11",
+  "description": "Analiza porownania z maskowaniem vs bez maskowania, proporcji sladow zrodla oraz 2 pozostalosci w validation",
+  "masking_hit_rates": {
+    "train": {
+      "n_total": 180,
+      "n_ham": 120,
+      "n_spam": 60,
+      "any_pattern_ham": 85,
+      "any_pattern_ham_pct": 70.83,
+      "any_pattern_spam": 27,
+      "any_pattern_spam_pct": 45.0,
+      "any_pattern_total": 112,
+      "any_pattern_total_pct": 62.22,
+      "by_category": {
+        "subject_list_tags": {
+          "ham": 32,
+          "ham_pct": 26.67,
+          "spam": 18,
+          "spam_pct": 30.0
+        },
+        "list_footers_and_banners": {
+          "ham": 40,
+          "ham_pct": 33.33,
+          "spam": 18,
+          "spam_pct": 30.0
+        },
+        "rss_headers": {
+          "ham": 35,
+          "ham_pct": 29.17,
+          "spam": 0,
+          "spam_pct": 0.0
+        },
+        "anonymization_traces": {
+          "ham": 2,
+          "ham_pct": 1.67,
+          "spam": 9,
+          "spam_pct": 15.0
+        }
+      }
+    },
+    "validation": {
+      "n_total": 60,
+      "n_ham": 40,
+      "n_spam": 20,
+      "any_pattern_ham": 27,
+      "any_pattern_ham_pct": 67.5,
+      "any_pattern_spam": 6,
+      "any_pattern_spam_pct": 30.0,
+      "any_pattern_total": 33,
+      "any_pattern_total_pct": 55.0,
+      "by_category": {
+        "subject_list_tags": {
+          "ham": 9,
+          "ham_pct": 22.5,
+          "spam": 5,
+          "spam_pct": 25.0
+        },
+        "list_footers_and_banners": {
+          "ham": 16,
+          "ham_pct": 40.0,
+          "spam": 5,
+          "spam_pct": 25.0
+        },
+        "rss_headers": {
+          "ham": 8,
+          "ham_pct": 20.0,
+          "spam": 0,
+          "spam_pct": 0.0
+        },
+        "anonymization_traces": {
+          "ham": 0,
+          "ham_pct": 0.0,
+          "spam": 1,
+          "spam_pct": 5.0
+        }
+      }
+    }
+  },
+  "without_masking_top_30_analysis": {
+    "matches_lab3_diagnostics_without_masking": true,
+    "model_type": "logistic_regression",
+    "param": {
+      "C": 100.0
+    },
+    "threshold": 0.30194223867815795,
+    "vocab_size": 2648,
+    "top_30_enriched": {
+      "ham": [
+        {
+          "rank": 1,
+          "token": "date",
+          "weight": -3.6865658533908623,
+          "df_unmasked": {
+            "ham": 43,
+            "spam": 2,
+            "total": 45
+          },
+          "df_masked": {
+            "ham": 9,
+            "spam": 2,
+            "total": 11
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 34,
+            "spam": 0,
+            "total": 34
+          },
+          "docs_reduced_by_masking": {
+            "ham": 35,
+            "spam": 0,
+            "total": 35
+          },
+          "share_only_in_artifacts": 0.7556,
+          "share_reduced_by_masking": 0.7778,
+          "masking_pattern_sources": {
+            "rss_date_header": 35
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 2,
+          "token": "re",
+          "weight": -3.5324509995717186,
+          "df_unmasked": {
+            "ham": 64,
+            "spam": 15,
+            "total": 79
+          },
+          "df_masked": {
+            "ham": 64,
+            "spam": 15,
+            "total": 79
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 3,
+          "token": "that",
+          "weight": -3.4514098385125345,
+          "df_unmasked": {
+            "ham": 72,
+            "spam": 37,
+            "total": 109
+          },
+          "df_masked": {
+            "ham": 71,
+            "spam": 37,
+            "total": 108
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 1,
+            "spam": 0,
+            "total": 1
+          },
+          "docs_reduced_by_masking": {
+            "ham": 4,
+            "spam": 0,
+            "total": 4
+          },
+          "share_only_in_artifacts": 0.0092,
+          "share_reduced_by_masking": 0.0367,
+          "masking_pattern_sources": {
+            "sf_osdn_sponsor_block": 4
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 4,
+          "token": "url",
+          "weight": -3.4011156544817926,
+          "df_unmasked": {
+            "ham": 36,
+            "spam": 3,
+            "total": 39
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 3,
+            "total": 6
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 33,
+            "spam": 0,
+            "total": 33
+          },
+          "docs_reduced_by_masking": {
+            "ham": 33,
+            "spam": 0,
+            "total": 33
+          },
+          "share_only_in_artifacts": 0.8462,
+          "share_reduced_by_masking": 0.8462,
+          "masking_pattern_sources": {
+            "rss_url_header": 33
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 5,
+          "token": "it",
+          "weight": -2.8451519528210096,
+          "df_unmasked": {
+            "ham": 73,
+            "spam": 31,
+            "total": 104
+          },
+          "df_masked": {
+            "ham": 73,
+            "spam": 31,
+            "total": 104
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 1,
+            "spam": 0,
+            "total": 1
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0096,
+          "masking_pattern_sources": {
+            "sf_osdn_sponsor_block": 1
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 6,
+          "token": "yahoo",
+          "weight": -2.2753902473742063,
+          "df_unmasked": {
+            "ham": 10,
+            "spam": 0,
+            "total": 10
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 0,
+            "total": 1
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 0.9,
+          "share_reduced_by_masking": 0.9,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "yahoo_groups_sponsor_box": 7
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 7,
+          "token": "is",
+          "weight": -2.2538949096543193,
+          "df_unmasked": {
+            "ham": 85,
+            "spam": 39,
+            "total": 124
+          },
+          "df_masked": {
+            "ham": 81,
+            "spam": 39,
+            "total": 120
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 4,
+            "spam": 0,
+            "total": 4
+          },
+          "docs_reduced_by_masking": {
+            "ham": 15,
+            "spam": 0,
+            "total": 15
+          },
+          "share_only_in_artifacts": 0.0323,
+          "share_reduced_by_masking": 0.121,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "sf_osdn_sponsor_block": 6
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 8,
+          "token": "groups",
+          "weight": -2.1558381305663055,
+          "df_unmasked": {
+            "ham": 11,
+            "spam": 1,
+            "total": 12
+          },
+          "df_masked": {
+            "ham": 2,
+            "spam": 1,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 0.75,
+          "share_reduced_by_masking": 0.75,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "yahoo_groups_sponsor_box": 7
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 9,
+          "token": "spam",
+          "weight": -2.0324003961378283,
+          "df_unmasked": {
+            "ham": 16,
+            "spam": 2,
+            "total": 18
+          },
+          "df_masked": {
+            "ham": 16,
+            "spam": 2,
+            "total": 18
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 10,
+          "token": "supplied",
+          "weight": -1.9592206851013896,
+          "df_unmasked": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "docs_reduced_by_masking": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "share_only_in_artifacts": 1.0,
+          "share_reduced_by_masking": 1.0,
+          "masking_pattern_sources": {
+            "rss_date_header": 14
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 11,
+          "token": "wrote",
+          "weight": -1.9555116853519072,
+          "df_unmasked": {
+            "ham": 37,
+            "spam": 0,
+            "total": 37
+          },
+          "df_masked": {
+            "ham": 36,
+            "spam": 0,
+            "total": 36
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 1,
+            "spam": 0,
+            "total": 1
+          },
+          "docs_reduced_by_masking": {
+            "ham": 1,
+            "spam": 0,
+            "total": 1
+          },
+          "share_only_in_artifacts": 0.027,
+          "share_reduced_by_masking": 0.027,
+          "masking_pattern_sources": {
+            "satalk_footer_email": 1
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 12,
+          "token": "<NUM>",
+          "weight": -1.9400993591439908,
+          "df_unmasked": {
+            "ham": 88,
+            "spam": 53,
+            "total": 141
+          },
+          "df_masked": {
+            "ham": 77,
+            "spam": 53,
+            "total": 130
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 11,
+            "spam": 0,
+            "total": 11
+          },
+          "docs_reduced_by_masking": {
+            "ham": 25,
+            "spam": 0,
+            "total": 25
+          },
+          "share_only_in_artifacts": 0.078,
+          "share_reduced_by_masking": 0.1773,
+          "masking_pattern_sources": {
+            "rss_date_header": 21,
+            "yahoo_groups_sponsor_box": 4
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 13,
+          "token": "they",
+          "weight": -1.8700400473568435,
+          "df_unmasked": {
+            "ham": 38,
+            "spam": 12,
+            "total": 50
+          },
+          "df_masked": {
+            "ham": 38,
+            "spam": 12,
+            "total": 50
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 14,
+          "token": "back",
+          "weight": -1.7407492140306082,
+          "df_unmasked": {
+            "ham": 17,
+            "spam": 8,
+            "total": 25
+          },
+          "df_masked": {
+            "ham": 17,
+            "spam": 8,
+            "total": 25
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 15,
+          "token": "rpm",
+          "weight": -1.7244555951613703,
+          "df_unmasked": {
+            "ham": 11,
+            "spam": 0,
+            "total": 11
+          },
+          "df_masked": {
+            "ham": 8,
+            "spam": 0,
+            "total": 8
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "docs_reduced_by_masking": {
+            "ham": 10,
+            "spam": 0,
+            "total": 10
+          },
+          "share_only_in_artifacts": 0.2727,
+          "share_reduced_by_masking": 0.9091,
+          "masking_pattern_sources": {
+            "rpm_list_footer_name": 10
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 16,
+          "token": "but",
+          "weight": -1.680195872300919,
+          "df_unmasked": {
+            "ham": 46,
+            "spam": 12,
+            "total": 58
+          },
+          "df_masked": {
+            "ham": 46,
+            "spam": 12,
+            "total": 58
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 17,
+          "token": "spamassassin",
+          "weight": -1.6701189582743898,
+          "df_unmasked": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 4,
+            "spam": 0,
+            "total": 4
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 5,
+            "spam": 0,
+            "total": 5
+          },
+          "docs_reduced_by_masking": {
+            "ham": 7,
+            "spam": 0,
+            "total": 7
+          },
+          "share_only_in_artifacts": 0.5556,
+          "share_reduced_by_masking": 0.7778,
+          "masking_pattern_sources": {
+            "satalk_footer_name": 6,
+            "anon_spamassassin_taint_domain": 3,
+            "generic_mailman_footer": 1
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 18,
+          "token": "on",
+          "weight": -1.5965980614563897,
+          "df_unmasked": {
+            "ham": 65,
+            "spam": 31,
+            "total": 96
+          },
+          "df_masked": {
+            "ham": 65,
+            "spam": 31,
+            "total": 96
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 19,
+          "token": "big",
+          "weight": -1.579758281507022,
+          "df_unmasked": {
+            "ham": 13,
+            "spam": 4,
+            "total": 17
+          },
+          "df_masked": {
+            "ham": 13,
+            "spam": 4,
+            "total": 17
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 20,
+          "token": "exmh",
+          "weight": -1.5367267272245249,
+          "df_unmasked": {
+            "ham": 7,
+            "spam": 0,
+            "total": 7
+          },
+          "df_masked": {
+            "ham": 4,
+            "spam": 0,
+            "total": 4
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "docs_reduced_by_masking": {
+            "ham": 7,
+            "spam": 0,
+            "total": 7
+          },
+          "share_only_in_artifacts": 0.4286,
+          "share_reduced_by_masking": 1.0,
+          "masking_pattern_sources": {
+            "exmh_footer_name": 7
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 21,
+          "token": "<URL>",
+          "weight": -1.5323899668126815,
+          "df_unmasked": {
+            "ham": 93,
+            "spam": 50,
+            "total": 143
+          },
+          "df_masked": {
+            "ham": 49,
+            "spam": 42,
+            "total": 91
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 44,
+            "spam": 8,
+            "total": 52
+          },
+          "docs_reduced_by_masking": {
+            "ham": 73,
+            "spam": 18,
+            "total": 91
+          },
+          "share_only_in_artifacts": 0.3636,
+          "share_reduced_by_masking": 0.6364,
+          "masking_pattern_sources": {
+            "rss_url_header": 33,
+            "ilug_footer_listinfo": 27,
+            "rpm_list_footer_url": 10,
+            "yahoo_groups_terms": 9,
+            "exmh_footer_url": 7
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 22,
+          "token": "david",
+          "weight": -1.5263962356131386,
+          "df_unmasked": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 23,
+          "token": "thanks",
+          "weight": -1.5165395885680617,
+          "df_unmasked": {
+            "ham": 12,
+            "spam": 4,
+            "total": 16
+          },
+          "df_masked": {
+            "ham": 12,
+            "spam": 4,
+            "total": 16
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 24,
+          "token": "like",
+          "weight": -1.4800332011881485,
+          "df_unmasked": {
+            "ham": 28,
+            "spam": 12,
+            "total": 40
+          },
+          "df_masked": {
+            "ham": 28,
+            "spam": 12,
+            "total": 40
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 25,
+          "token": "zzzzteana",
+          "weight": -1.373358464007744,
+          "df_unmasked": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 1.0,
+          "share_reduced_by_masking": 1.0,
+          "masking_pattern_sources": {
+            "subject_list_tags": 9
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 26,
+          "token": "ireland",
+          "weight": -1.361187709149892,
+          "df_unmasked": {
+            "ham": 2,
+            "spam": 0,
+            "total": 2
+          },
+          "df_masked": {
+            "ham": 2,
+            "spam": 0,
+            "total": 2
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 27,
+          "token": "would",
+          "weight": -1.3340012916618382,
+          "df_unmasked": {
+            "ham": 30,
+            "spam": 10,
+            "total": 40
+          },
+          "df_masked": {
+            "ham": 30,
+            "spam": 10,
+            "total": 40
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 28,
+          "token": "sf",
+          "weight": -1.3328579353477774,
+          "df_unmasked": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 6,
+            "spam": 0,
+            "total": 6
+          },
+          "docs_reduced_by_masking": {
+            "ham": 6,
+            "spam": 0,
+            "total": 6
+          },
+          "share_only_in_artifacts": 0.6667,
+          "share_reduced_by_masking": 0.6667,
+          "masking_pattern_sources": {
+            "sf_osdn_sponsor_block": 6
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 29,
+          "token": "cvs",
+          "weight": -1.3307631073166915,
+          "df_unmasked": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 30,
+          "token": "some",
+          "weight": -1.286491247081712,
+          "df_unmasked": {
+            "ham": 30,
+            "spam": 8,
+            "total": 38
+          },
+          "df_masked": {
+            "ham": 30,
+            "spam": 8,
+            "total": 38
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        }
+      ],
+      "spam": [
+        {
+          "rank": 1,
+          "token": "<CAPS>",
+          "weight": 7.118293232873533,
+          "df_unmasked": {
+            "ham": 97,
+            "spam": 51,
+            "total": 148
+          },
+          "df_masked": {
+            "ham": 65,
+            "spam": 47,
+            "total": 112
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 32,
+            "spam": 4,
+            "total": 36
+          },
+          "docs_reduced_by_masking": {
+            "ham": 53,
+            "spam": 18,
+            "total": 71
+          },
+          "share_only_in_artifacts": 0.2432,
+          "share_reduced_by_masking": 0.4797,
+          "masking_pattern_sources": {
+            "rss_url_header": 33,
+            "subject_list_tags": 27,
+            "rpm_list_footer_name": 10,
+            "sf_osdn_sponsor_block": 4,
+            "rss_date_header": 4
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 2,
+          "token": "<EXCLAM>",
+          "weight": 6.0424239892521365,
+          "df_unmasked": {
+            "ham": 34,
+            "spam": 41,
+            "total": 75
+          },
+          "df_masked": {
+            "ham": 24,
+            "spam": 41,
+            "total": 65
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 10,
+            "spam": 0,
+            "total": 10
+          },
+          "docs_reduced_by_masking": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "share_only_in_artifacts": 0.1333,
+          "share_reduced_by_masking": 0.1867,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "yahoo_groups_sponsor_box": 7,
+            "sf_osdn_sponsor_block": 5
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 3,
+          "token": "you",
+          "weight": 5.819172853493303,
+          "df_unmasked": {
+            "ham": 51,
+            "spam": 54,
+            "total": 105
+          },
+          "df_masked": {
+            "ham": 51,
+            "spam": 54,
+            "total": 105
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 4,
+          "token": "our",
+          "weight": 4.498355891295536,
+          "df_unmasked": {
+            "ham": 12,
+            "spam": 40,
+            "total": 52
+          },
+          "df_masked": {
+            "ham": 12,
+            "spam": 40,
+            "total": 52
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 5,
+          "token": "your",
+          "weight": 4.445135219723609,
+          "df_unmasked": {
+            "ham": 37,
+            "spam": 52,
+            "total": 89
+          },
+          "df_masked": {
+            "ham": 30,
+            "spam": 52,
+            "total": 82
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 7,
+            "spam": 0,
+            "total": 7
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 0.0787,
+          "share_reduced_by_masking": 0.1011,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 6,
+          "token": "<MONEY>",
+          "weight": 4.0258143678305816,
+          "df_unmasked": {
+            "ham": 7,
+            "spam": 34,
+            "total": 41
+          },
+          "df_masked": {
+            "ham": 7,
+            "spam": 34,
+            "total": 41
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 7,
+          "token": "we",
+          "weight": 3.754380410729779,
+          "df_unmasked": {
+            "ham": 25,
+            "spam": 36,
+            "total": 61
+          },
+          "df_masked": {
+            "ham": 25,
+            "spam": 36,
+            "total": 61
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 8,
+          "token": "br",
+          "weight": 3.4287708511316795,
+          "df_unmasked": {
+            "ham": 1,
+            "spam": 1,
+            "total": 2
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 1,
+            "total": 2
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 9,
+          "token": "please",
+          "weight": 3.3437699245589183,
+          "df_unmasked": {
+            "ham": 3,
+            "spam": 37,
+            "total": 40
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 37,
+            "total": 40
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 10,
+          "token": "vip",
+          "weight": 3.1368620905002156,
+          "df_unmasked": {
+            "ham": 0,
+            "spam": 3,
+            "total": 3
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 3,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 11,
+          "token": "money",
+          "weight": 3.1264270576595456,
+          "df_unmasked": {
+            "ham": 5,
+            "spam": 25,
+            "total": 30
+          },
+          "df_masked": {
+            "ham": 5,
+            "spam": 25,
+            "total": 30
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 12,
+          "token": "will",
+          "weight": 2.9486450317994573,
+          "df_unmasked": {
+            "ham": 25,
+            "spam": 35,
+            "total": 60
+          },
+          "df_masked": {
+            "ham": 25,
+            "spam": 35,
+            "total": 60
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 13,
+          "token": "drive",
+          "weight": 2.8727393369007714,
+          "df_unmasked": {
+            "ham": 0,
+            "spam": 4,
+            "total": 4
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 4,
+            "total": 4
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 14,
+          "token": "ne",
+          "weight": 2.870927324724453,
+          "df_unmasked": {
+            "ham": 0,
+            "spam": 2,
+            "total": 2
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 2,
+            "total": 2
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 15,
+          "token": "su",
+          "weight": 2.8372849944133813,
+          "df_unmasked": {
+            "ham": 1,
+            "spam": 1,
+            "total": 2
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 1,
+            "total": 2
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 16,
+          "token": "click",
+          "weight": 2.7016052951621106,
+          "df_unmasked": {
+            "ham": 1,
+            "spam": 26,
+            "total": 27
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 26,
+            "total": 27
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 17,
+          "token": "market",
+          "weight": 2.6784845259095,
+          "df_unmasked": {
+            "ham": 2,
+            "spam": 6,
+            "total": 8
+          },
+          "df_masked": {
+            "ham": 2,
+            "spam": 6,
+            "total": 8
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 18,
+          "token": "visit",
+          "weight": 2.572457248713427,
+          "df_unmasked": {
+            "ham": 1,
+            "spam": 7,
+            "total": 8
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 7,
+            "total": 8
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 19,
+          "token": "domain",
+          "weight": 2.562813698749696,
+          "df_unmasked": {
+            "ham": 0,
+            "spam": 3,
+            "total": 3
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 3,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 20,
+          "token": "free",
+          "weight": 2.5505588991737174,
+          "df_unmasked": {
+            "ham": 18,
+            "spam": 33,
+            "total": 51
+          },
+          "df_masked": {
+            "ham": 10,
+            "spam": 33,
+            "total": 43
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 8,
+            "spam": 0,
+            "total": 8
+          },
+          "docs_reduced_by_masking": {
+            "ham": 8,
+            "spam": 0,
+            "total": 8
+          },
+          "share_only_in_artifacts": 0.1569,
+          "share_reduced_by_masking": 0.1569,
+          "masking_pattern_sources": {
+            "sf_osdn_sponsor_block": 4,
+            "yahoo_groups_sponsor_box": 4
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 21,
+          "token": "investment",
+          "weight": 2.439409897728964,
+          "df_unmasked": {
+            "ham": 2,
+            "spam": 10,
+            "total": 12
+          },
+          "df_masked": {
+            "ham": 2,
+            "spam": 10,
+            "total": 12
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 22,
+          "token": "numbers",
+          "weight": 2.435579405478913,
+          "df_unmasked": {
+            "ham": 3,
+            "spam": 6,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 6,
+            "total": 9
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 23,
+          "token": "social",
+          "weight": 2.358263861029916,
+          "df_unmasked": {
+            "ham": 1,
+            "spam": 7,
+            "total": 8
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 1,
+            "total": 2
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 6,
+            "total": 6
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 7,
+            "total": 7
+          },
+          "share_only_in_artifacts": 0.75,
+          "share_reduced_by_masking": 0.875,
+          "masking_pattern_sources": {
+            "subject_list_tags": 7,
+            "ilug_footer_header": 7
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 24,
+          "token": "membership",
+          "weight": 2.29691916301936,
+          "df_unmasked": {
+            "ham": 0,
+            "spam": 9,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 9,
+            "total": 9
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 25,
+          "token": "per",
+          "weight": 2.2851128442129394,
+          "df_unmasked": {
+            "ham": 3,
+            "spam": 9,
+            "total": 12
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 9,
+            "total": 12
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 26,
+          "token": "access",
+          "weight": 2.1904586908656043,
+          "df_unmasked": {
+            "ham": 4,
+            "spam": 13,
+            "total": 17
+          },
+          "df_masked": {
+            "ham": 4,
+            "spam": 13,
+            "total": 17
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 27,
+          "token": "rates",
+          "weight": 2.174230455590533,
+          "df_unmasked": {
+            "ham": 2,
+            "spam": 6,
+            "total": 8
+          },
+          "df_masked": {
+            "ham": 2,
+            "spam": 6,
+            "total": 8
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 28,
+          "token": "poker",
+          "weight": 2.1606961782298035,
+          "df_unmasked": {
+            "ham": 0,
+            "spam": 2,
+            "total": 2
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 2,
+            "total": 2
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 29,
+          "token": "advertising",
+          "weight": 2.1498620964277144,
+          "df_unmasked": {
+            "ham": 0,
+            "spam": 4,
+            "total": 4
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 4,
+            "total": 4
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 30,
+          "token": "link",
+          "weight": 2.0860725578773986,
+          "df_unmasked": {
+            "ham": 7,
+            "spam": 15,
+            "total": 22
+          },
+          "df_masked": {
+            "ham": 7,
+            "spam": 15,
+            "total": 22
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "share_only_in_artifacts": 0.0,
+          "share_reduced_by_masking": 0.0,
+          "masking_pattern_sources": {},
+          "primarily_from_masked_artifacts": false
+        }
+      ]
+    },
+    "tokens_primarily_from_masked_artifacts": {
+      "ham": [
+        {
+          "rank": 1,
+          "token": "date",
+          "weight": -3.6865658533908623,
+          "df_unmasked": {
+            "ham": 43,
+            "spam": 2,
+            "total": 45
+          },
+          "df_masked": {
+            "ham": 9,
+            "spam": 2,
+            "total": 11
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 34,
+            "spam": 0,
+            "total": 34
+          },
+          "docs_reduced_by_masking": {
+            "ham": 35,
+            "spam": 0,
+            "total": 35
+          },
+          "share_only_in_artifacts": 0.7556,
+          "share_reduced_by_masking": 0.7778,
+          "masking_pattern_sources": {
+            "rss_date_header": 35
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 4,
+          "token": "url",
+          "weight": -3.4011156544817926,
+          "df_unmasked": {
+            "ham": 36,
+            "spam": 3,
+            "total": 39
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 3,
+            "total": 6
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 33,
+            "spam": 0,
+            "total": 33
+          },
+          "docs_reduced_by_masking": {
+            "ham": 33,
+            "spam": 0,
+            "total": 33
+          },
+          "share_only_in_artifacts": 0.8462,
+          "share_reduced_by_masking": 0.8462,
+          "masking_pattern_sources": {
+            "rss_url_header": 33
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 6,
+          "token": "yahoo",
+          "weight": -2.2753902473742063,
+          "df_unmasked": {
+            "ham": 10,
+            "spam": 0,
+            "total": 10
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 0,
+            "total": 1
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 0.9,
+          "share_reduced_by_masking": 0.9,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "yahoo_groups_sponsor_box": 7
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 8,
+          "token": "groups",
+          "weight": -2.1558381305663055,
+          "df_unmasked": {
+            "ham": 11,
+            "spam": 1,
+            "total": 12
+          },
+          "df_masked": {
+            "ham": 2,
+            "spam": 1,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 0.75,
+          "share_reduced_by_masking": 0.75,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "yahoo_groups_sponsor_box": 7
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 10,
+          "token": "supplied",
+          "weight": -1.9592206851013896,
+          "df_unmasked": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "docs_reduced_by_masking": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "share_only_in_artifacts": 1.0,
+          "share_reduced_by_masking": 1.0,
+          "masking_pattern_sources": {
+            "rss_date_header": 14
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 17,
+          "token": "spamassassin",
+          "weight": -1.6701189582743898,
+          "df_unmasked": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 4,
+            "spam": 0,
+            "total": 4
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 5,
+            "spam": 0,
+            "total": 5
+          },
+          "docs_reduced_by_masking": {
+            "ham": 7,
+            "spam": 0,
+            "total": 7
+          },
+          "share_only_in_artifacts": 0.5556,
+          "share_reduced_by_masking": 0.7778,
+          "masking_pattern_sources": {
+            "satalk_footer_name": 6,
+            "anon_spamassassin_taint_domain": 3,
+            "generic_mailman_footer": 1
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 25,
+          "token": "zzzzteana",
+          "weight": -1.373358464007744,
+          "df_unmasked": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 1.0,
+          "share_reduced_by_masking": 1.0,
+          "masking_pattern_sources": {
+            "subject_list_tags": 9
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 28,
+          "token": "sf",
+          "weight": -1.3328579353477774,
+          "df_unmasked": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 6,
+            "spam": 0,
+            "total": 6
+          },
+          "docs_reduced_by_masking": {
+            "ham": 6,
+            "spam": 0,
+            "total": 6
+          },
+          "share_only_in_artifacts": 0.6667,
+          "share_reduced_by_masking": 0.6667,
+          "masking_pattern_sources": {
+            "sf_osdn_sponsor_block": 6
+          },
+          "primarily_from_masked_artifacts": true
+        }
+      ],
+      "spam": [
+        {
+          "rank": 23,
+          "token": "social",
+          "weight": 2.358263861029916,
+          "df_unmasked": {
+            "ham": 1,
+            "spam": 7,
+            "total": 8
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 1,
+            "total": 2
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 6,
+            "total": 6
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 7,
+            "total": 7
+          },
+          "share_only_in_artifacts": 0.75,
+          "share_reduced_by_masking": 0.875,
+          "masking_pattern_sources": {
+            "subject_list_tags": 7,
+            "ilug_footer_header": 7
+          },
+          "primarily_from_masked_artifacts": true
+        }
+      ]
+    },
+    "tokens_with_any_major_artifact_overlap_ge_5_docs": {
+      "ham": [
+        {
+          "rank": 1,
+          "token": "date",
+          "weight": -3.6865658533908623,
+          "df_unmasked": {
+            "ham": 43,
+            "spam": 2,
+            "total": 45
+          },
+          "df_masked": {
+            "ham": 9,
+            "spam": 2,
+            "total": 11
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 34,
+            "spam": 0,
+            "total": 34
+          },
+          "docs_reduced_by_masking": {
+            "ham": 35,
+            "spam": 0,
+            "total": 35
+          },
+          "share_only_in_artifacts": 0.7556,
+          "share_reduced_by_masking": 0.7778,
+          "masking_pattern_sources": {
+            "rss_date_header": 35
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 4,
+          "token": "url",
+          "weight": -3.4011156544817926,
+          "df_unmasked": {
+            "ham": 36,
+            "spam": 3,
+            "total": 39
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 3,
+            "total": 6
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 33,
+            "spam": 0,
+            "total": 33
+          },
+          "docs_reduced_by_masking": {
+            "ham": 33,
+            "spam": 0,
+            "total": 33
+          },
+          "share_only_in_artifacts": 0.8462,
+          "share_reduced_by_masking": 0.8462,
+          "masking_pattern_sources": {
+            "rss_url_header": 33
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 6,
+          "token": "yahoo",
+          "weight": -2.2753902473742063,
+          "df_unmasked": {
+            "ham": 10,
+            "spam": 0,
+            "total": 10
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 0,
+            "total": 1
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 0.9,
+          "share_reduced_by_masking": 0.9,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "yahoo_groups_sponsor_box": 7
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 7,
+          "token": "is",
+          "weight": -2.2538949096543193,
+          "df_unmasked": {
+            "ham": 85,
+            "spam": 39,
+            "total": 124
+          },
+          "df_masked": {
+            "ham": 81,
+            "spam": 39,
+            "total": 120
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 4,
+            "spam": 0,
+            "total": 4
+          },
+          "docs_reduced_by_masking": {
+            "ham": 15,
+            "spam": 0,
+            "total": 15
+          },
+          "share_only_in_artifacts": 0.0323,
+          "share_reduced_by_masking": 0.121,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "sf_osdn_sponsor_block": 6
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 8,
+          "token": "groups",
+          "weight": -2.1558381305663055,
+          "df_unmasked": {
+            "ham": 11,
+            "spam": 1,
+            "total": 12
+          },
+          "df_masked": {
+            "ham": 2,
+            "spam": 1,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 0.75,
+          "share_reduced_by_masking": 0.75,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "yahoo_groups_sponsor_box": 7
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 10,
+          "token": "supplied",
+          "weight": -1.9592206851013896,
+          "df_unmasked": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "docs_reduced_by_masking": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "share_only_in_artifacts": 1.0,
+          "share_reduced_by_masking": 1.0,
+          "masking_pattern_sources": {
+            "rss_date_header": 14
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 12,
+          "token": "<NUM>",
+          "weight": -1.9400993591439908,
+          "df_unmasked": {
+            "ham": 88,
+            "spam": 53,
+            "total": 141
+          },
+          "df_masked": {
+            "ham": 77,
+            "spam": 53,
+            "total": 130
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 11,
+            "spam": 0,
+            "total": 11
+          },
+          "docs_reduced_by_masking": {
+            "ham": 25,
+            "spam": 0,
+            "total": 25
+          },
+          "share_only_in_artifacts": 0.078,
+          "share_reduced_by_masking": 0.1773,
+          "masking_pattern_sources": {
+            "rss_date_header": 21,
+            "yahoo_groups_sponsor_box": 4
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 15,
+          "token": "rpm",
+          "weight": -1.7244555951613703,
+          "df_unmasked": {
+            "ham": 11,
+            "spam": 0,
+            "total": 11
+          },
+          "df_masked": {
+            "ham": 8,
+            "spam": 0,
+            "total": 8
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "docs_reduced_by_masking": {
+            "ham": 10,
+            "spam": 0,
+            "total": 10
+          },
+          "share_only_in_artifacts": 0.2727,
+          "share_reduced_by_masking": 0.9091,
+          "masking_pattern_sources": {
+            "rpm_list_footer_name": 10
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 17,
+          "token": "spamassassin",
+          "weight": -1.6701189582743898,
+          "df_unmasked": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 4,
+            "spam": 0,
+            "total": 4
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 5,
+            "spam": 0,
+            "total": 5
+          },
+          "docs_reduced_by_masking": {
+            "ham": 7,
+            "spam": 0,
+            "total": 7
+          },
+          "share_only_in_artifacts": 0.5556,
+          "share_reduced_by_masking": 0.7778,
+          "masking_pattern_sources": {
+            "satalk_footer_name": 6,
+            "anon_spamassassin_taint_domain": 3,
+            "generic_mailman_footer": 1
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 20,
+          "token": "exmh",
+          "weight": -1.5367267272245249,
+          "df_unmasked": {
+            "ham": 7,
+            "spam": 0,
+            "total": 7
+          },
+          "df_masked": {
+            "ham": 4,
+            "spam": 0,
+            "total": 4
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "docs_reduced_by_masking": {
+            "ham": 7,
+            "spam": 0,
+            "total": 7
+          },
+          "share_only_in_artifacts": 0.4286,
+          "share_reduced_by_masking": 1.0,
+          "masking_pattern_sources": {
+            "exmh_footer_name": 7
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 21,
+          "token": "<URL>",
+          "weight": -1.5323899668126815,
+          "df_unmasked": {
+            "ham": 93,
+            "spam": 50,
+            "total": 143
+          },
+          "df_masked": {
+            "ham": 49,
+            "spam": 42,
+            "total": 91
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 44,
+            "spam": 8,
+            "total": 52
+          },
+          "docs_reduced_by_masking": {
+            "ham": 73,
+            "spam": 18,
+            "total": 91
+          },
+          "share_only_in_artifacts": 0.3636,
+          "share_reduced_by_masking": 0.6364,
+          "masking_pattern_sources": {
+            "rss_url_header": 33,
+            "ilug_footer_listinfo": 27,
+            "rpm_list_footer_url": 10,
+            "yahoo_groups_terms": 9,
+            "exmh_footer_url": 7
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 25,
+          "token": "zzzzteana",
+          "weight": -1.373358464007744,
+          "df_unmasked": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 0,
+            "spam": 0,
+            "total": 0
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 1.0,
+          "share_reduced_by_masking": 1.0,
+          "masking_pattern_sources": {
+            "subject_list_tags": 9
+          },
+          "primarily_from_masked_artifacts": true
+        },
+        {
+          "rank": 28,
+          "token": "sf",
+          "weight": -1.3328579353477774,
+          "df_unmasked": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "df_masked": {
+            "ham": 3,
+            "spam": 0,
+            "total": 3
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 6,
+            "spam": 0,
+            "total": 6
+          },
+          "docs_reduced_by_masking": {
+            "ham": 6,
+            "spam": 0,
+            "total": 6
+          },
+          "share_only_in_artifacts": 0.6667,
+          "share_reduced_by_masking": 0.6667,
+          "masking_pattern_sources": {
+            "sf_osdn_sponsor_block": 6
+          },
+          "primarily_from_masked_artifacts": true
+        }
+      ],
+      "spam": [
+        {
+          "rank": 1,
+          "token": "<CAPS>",
+          "weight": 7.118293232873533,
+          "df_unmasked": {
+            "ham": 97,
+            "spam": 51,
+            "total": 148
+          },
+          "df_masked": {
+            "ham": 65,
+            "spam": 47,
+            "total": 112
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 32,
+            "spam": 4,
+            "total": 36
+          },
+          "docs_reduced_by_masking": {
+            "ham": 53,
+            "spam": 18,
+            "total": 71
+          },
+          "share_only_in_artifacts": 0.2432,
+          "share_reduced_by_masking": 0.4797,
+          "masking_pattern_sources": {
+            "rss_url_header": 33,
+            "subject_list_tags": 27,
+            "rpm_list_footer_name": 10,
+            "sf_osdn_sponsor_block": 4,
+            "rss_date_header": 4
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 2,
+          "token": "<EXCLAM>",
+          "weight": 6.0424239892521365,
+          "df_unmasked": {
+            "ham": 34,
+            "spam": 41,
+            "total": 75
+          },
+          "df_masked": {
+            "ham": 24,
+            "spam": 41,
+            "total": 65
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 10,
+            "spam": 0,
+            "total": 10
+          },
+          "docs_reduced_by_masking": {
+            "ham": 14,
+            "spam": 0,
+            "total": 14
+          },
+          "share_only_in_artifacts": 0.1333,
+          "share_reduced_by_masking": 0.1867,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9,
+            "yahoo_groups_sponsor_box": 7,
+            "sf_osdn_sponsor_block": 5
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 5,
+          "token": "your",
+          "weight": 4.445135219723609,
+          "df_unmasked": {
+            "ham": 37,
+            "spam": 52,
+            "total": 89
+          },
+          "df_masked": {
+            "ham": 30,
+            "spam": 52,
+            "total": 82
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 7,
+            "spam": 0,
+            "total": 7
+          },
+          "docs_reduced_by_masking": {
+            "ham": 9,
+            "spam": 0,
+            "total": 9
+          },
+          "share_only_in_artifacts": 0.0787,
+          "share_reduced_by_masking": 0.1011,
+          "masking_pattern_sources": {
+            "yahoo_groups_terms": 9
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 20,
+          "token": "free",
+          "weight": 2.5505588991737174,
+          "df_unmasked": {
+            "ham": 18,
+            "spam": 33,
+            "total": 51
+          },
+          "df_masked": {
+            "ham": 10,
+            "spam": 33,
+            "total": 43
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 8,
+            "spam": 0,
+            "total": 8
+          },
+          "docs_reduced_by_masking": {
+            "ham": 8,
+            "spam": 0,
+            "total": 8
+          },
+          "share_only_in_artifacts": 0.1569,
+          "share_reduced_by_masking": 0.1569,
+          "masking_pattern_sources": {
+            "sf_osdn_sponsor_block": 4,
+            "yahoo_groups_sponsor_box": 4
+          },
+          "primarily_from_masked_artifacts": false
+        },
+        {
+          "rank": 23,
+          "token": "social",
+          "weight": 2.358263861029916,
+          "df_unmasked": {
+            "ham": 1,
+            "spam": 7,
+            "total": 8
+          },
+          "df_masked": {
+            "ham": 1,
+            "spam": 1,
+            "total": 2
+          },
+          "docs_only_in_masked_artifacts": {
+            "ham": 0,
+            "spam": 6,
+            "total": 6
+          },
+          "docs_reduced_by_masking": {
+            "ham": 0,
+            "spam": 7,
+            "total": 7
+          },
+          "share_only_in_artifacts": 0.75,
+          "share_reduced_by_masking": 0.875,
+          "masking_pattern_sources": {
+            "subject_list_tags": 7,
+            "ilug_footer_header": 7
+          },
+          "primarily_from_masked_artifacts": true
+        }
+      ]
+    }
+  },
+  "validation_remnants_vocab_and_weights": [
+    {
+      "message_id": "2d5d89669551e7d0",
+      "true_label": "ham",
+      "matched_lines_in_masked_text": [
+        "along to zaphod@egroups.com",
+        "tale from the mud pit, be sure to drop us a line at: zaphod@egroups.com."
+      ],
+      "context_snippet_in_masked_text": "If you have an example of how you've tried to help Dave, please drop us an\ne-mail about it.  We'll keep it strictly confidential of course.  Send it\nalong to zaphod@egroups.com\n\n\n 9/12/02; 10:13:11 AM - Discuss\n\n\n\n\nTrying to talk with Dave is like trying to wrestle a pig...\n\n\nThe trouble is, you get dirty and the pig seems to like it.\n\nAnother developer tries talking to Dave and discovers it's fundamentally\nimpossible:\n\nHis basic response was just that RDF was a joke and the Semantic Web\ndevelopers are doing a terrible job.\n\nIn the span of less than five minutes Dave makes such an ass of himself that\npeople at other tables start whispering \"that guy is an idiot...\"\n\nThe zaphodim, however, are veteran pig wrestlers.  If you've got a similar\ntale from the mud pit, be sure to drop us a line at: zaphod@egroups.com.\n\n\n 9/11/02; 2:17:58 PM - Discuss (1 response)\n",
+      "matched_line_tokens_in_model_vocab": [
+        {
+          "token": "<EMAIL>",
+          "in_vocab": true,
+          "weight": 0.07185442335071936,
+          "idf": 2.369855634776731
+        },
+        {
+          "token": "along",
+          "in_vocab": true,
+          "weight": -0.055798941242585776,
+          "idf": 4.11905548958599
+        },
+        {
+          "token": "at",
+          "in_vocab": true,
+          "weight": -0.16267220924908407,
+          "idf": 1.8810089177295155
+        },
+        {
+          "token": "be",
+          "in_vocab": true,
+          "weight": 0.11008707073923449,
+          "idf": 1.6033771811312358
+        },
+        {
+          "token": "drop",
+          "in_vocab": false,
+          "weight": null,
+          "idf": null
+        },
+        {
+          "token": "from",
+          "in_vocab": true,
+          "weight": 1.0903350592592687,
+          "idf": 1.841788204576234
+        },
+        {
+          "token": "line",
+          "in_vocab": true,
+          "weight": 0.05057248890468144,
+          "idf": 3.4259083090260445
+        },
+        {
+          "token": "mud",
+          "in_vocab": false,
+          "weight": null,
+          "idf": null
+        },
+        {
+          "token": "pit",
+          "in_vocab": false,
+          "weight": null,
+          "idf": null
+        },
+        {
+          "token": "sure",
+          "in_vocab": true,
+          "weight": -0.2887056325962897,
+          "idf": 3.0204432009178803
+        },
+        {
+          "token": "tale",
+          "in_vocab": false,
+          "weight": null,
+          "idf": null
+        },
+        {
+          "token": "the",
+          "in_vocab": true,
+          "weight": -0.908304604519814,
+          "idf": 1.155071914346579
+        },
+        {
+          "token": "to",
+          "in_vocab": true,
+          "weight": 0.41344554129252603,
+          "idf": 1.1680591098733903
+        },
+        {
+          "token": "us",
+          "in_vocab": true,
+          "weight": 0.6452039772760177,
+          "idf": 2.5875791186216013
+        }
+      ],
+      "orig_score": 0.20046876453359921,
+      "orig_predicted_label": "ham",
+      "score_after_removing_matched_lines": 0.19967440914056075,
+      "predicted_label_after_removing_matched_lines": "ham",
+      "score_diff": -0.0007943553930384595
+    },
+    {
+      "message_id": "4848bd860e4e2f63",
+      "true_label": "ham",
+      "matched_lines_in_masked_text": [
+        "public mailing list sign up package"
+      ],
+      "context_snippet_in_masked_text": "public mailing list sign up package\n\nHas anyone seen/heard of/used some package that would let a random person \ngo to a webpage, create a mailing list, then administer that list.  Also \nof course let ppl sign up for the lists and manage their subscriptions. ",
+      "matched_line_tokens_in_model_vocab": [
+        {
+          "token": "list",
+          "in_vocab": true,
+          "weight": 0.5598814340662261,
+          "idf": 2.6149780928097157
+        },
+        {
+          "token": "mailing",
+          "in_vocab": true,
+          "weight": 0.23094438601397332,
+          "idf": 3.633547673804289
+        },
+        {
+          "token": "package",
+          "in_vocab": true,
+          "weight": 0.0830513855510095,
+          "idf": 3.89591193827178
+        },
+        {
+          "token": "public",
+          "in_vocab": true,
+          "weight": 0.06264580316542792,
+          "idf": 3.89591193827178
+        },
+        {
+          "token": "sign",
+          "in_vocab": true,
+          "weight": 0.1894439545425937,
+          "idf": 3.7135903814778253
+        },
+        {
+          "token": "up",
+          "in_vocab": true,
+          "weight": 0.09071543826762521,
+          "idf": 2.2666713985415
+        }
+      ],
+      "orig_score": 0.052697793983665885,
+      "orig_predicted_label": "ham",
+      "score_after_removing_matched_lines": 0.052697793983665885,
+      "predicted_label_after_removing_matched_lines": "ham",
+      "score_diff": 0.0
+    }
+  ]
+}

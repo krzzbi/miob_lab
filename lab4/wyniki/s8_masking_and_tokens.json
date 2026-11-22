@@ -1,0 +1,937 @@
+{
+  "check": "S8",
+  "description": "Maskowanie i tokeny na danych train.csv i validation.csv oraz testy syntetyczne",
+  "part_i_masking_pattern_stats": {
+    "train": [
+      {
+        "name": "subject_list_tags",
+        "sequential_spam": 18,
+        "sequential_ham": 32,
+        "sequential_total": 50,
+        "sequential_spam_ids": [
+          "538709913c367d14",
+          "df3b67e11dfbf53c",
+          "4f0fb8843596b24a",
+          "33592bd3e301eeee",
+          "3a95f253d32512f6",
+          "42c757e9c28ba823",
+          "fdf38a01c99414b6",
+          "42cfcf55774efb77",
+          "78c657722a27005a",
+          "7ab728181a2ef550",
+          "c7a4390cb674606c",
+          "885f0773c263e57b",
+          "5c24d6e1923ba464",
+          "9dab509f223b2513",
+          "3cad3aee42df5b21",
+          "52c16dcd1605d5e8",
+          "fbafb6868ba99464",
+          "d6ed0847b83dfc6f"
+        ],
+        "standalone_spam": 18,
+        "standalone_ham": 32,
+        "standalone_total": 50
+      },
+      {
+        "name": "ilug_footer_header",
+        "sequential_spam": 18,
+        "sequential_ham": 6,
+        "sequential_total": 24,
+        "sequential_spam_ids": [
+          "538709913c367d14",
+          "df3b67e11dfbf53c",
+          "4f0fb8843596b24a",
+          "33592bd3e301eeee",
+          "3a95f253d32512f6",
+          "42c757e9c28ba823",
+          "fdf38a01c99414b6",
+          "42cfcf55774efb77",
+          "78c657722a27005a",
+          "7ab728181a2ef550",
+          "c7a4390cb674606c",
+          "885f0773c263e57b",
+          "5c24d6e1923ba464",
+          "9dab509f223b2513",
+          "3cad3aee42df5b21",
+          "52c16dcd1605d5e8",
+          "fbafb6868ba99464",
+          "d6ed0847b83dfc6f"
+        ],
+        "standalone_spam": 18,
+        "standalone_ham": 6,
+        "standalone_total": 24
+      },
+      {
+        "name": "ilug_footer_listinfo",
+        "sequential_spam": 18,
+        "sequential_ham": 6,
+        "sequential_total": 24,
+        "sequential_spam_ids": [
+          "538709913c367d14",
+          "df3b67e11dfbf53c",
+          "4f0fb8843596b24a",
+          "33592bd3e301eeee",
+          "3a95f253d32512f6",
+          "42c757e9c28ba823",
+          "fdf38a01c99414b6",
+          "42cfcf55774efb77",
+          "78c657722a27005a",
+          "7ab728181a2ef550",
+          "c7a4390cb674606c",
+          "885f0773c263e57b",
+          "5c24d6e1923ba464",
+          "9dab509f223b2513",
+          "3cad3aee42df5b21",
+          "52c16dcd1605d5e8",
+          "fbafb6868ba99464",
+          "d6ed0847b83dfc6f"
+        ],
+        "standalone_spam": 18,
+        "standalone_ham": 6,
+        "standalone_total": 24
+      },
+      {
+        "name": "ilug_footer_maintainer",
+        "sequential_spam": 18,
+        "sequential_ham": 6,
+        "sequential_total": 24,
+        "sequential_spam_ids": [
+          "538709913c367d14",
+          "df3b67e11dfbf53c",
+          "4f0fb8843596b24a",
+          "33592bd3e301eeee",
+          "3a95f253d32512f6",
+          "42c757e9c28ba823",
+          "fdf38a01c99414b6",
+          "42cfcf55774efb77",
+          "78c657722a27005a",
+          "7ab728181a2ef550",
+          "c7a4390cb674606c",
+          "885f0773c263e57b",
+          "5c24d6e1923ba464",
+          "9dab509f223b2513",
+          "3cad3aee42df5b21",
+          "52c16dcd1605d5e8",
+          "fbafb6868ba99464",
+          "d6ed0847b83dfc6f"
+        ],
+        "standalone_spam": 18,
+        "standalone_ham": 6,
+        "standalone_total": 24
+      },
+      {
+        "name": "rpm_list_footer_name",
+        "sequential_spam": 0,
+        "sequential_ham": 10,
+        "sequential_total": 10,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 10,
+        "standalone_total": 10
+      },
+      {
+        "name": "rpm_list_footer_url",
+        "sequential_spam": 0,
+        "sequential_ham": 10,
+        "sequential_total": 10,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 10,
+        "standalone_total": 10
+      },
+      {
+        "name": "sf_osdn_sponsor_block",
+        "sequential_spam": 0,
+        "sequential_ham": 6,
+        "sequential_total": 6,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 6,
+        "standalone_total": 6
+      },
+      {
+        "name": "satalk_footer_name",
+        "sequential_spam": 0,
+        "sequential_ham": 6,
+        "sequential_total": 6,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 6,
+        "standalone_total": 6
+      },
+      {
+        "name": "satalk_footer_email",
+        "sequential_spam": 0,
+        "sequential_ham": 6,
+        "sequential_total": 6,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 6,
+        "standalone_total": 6
+      },
+      {
+        "name": "satalk_footer_url",
+        "sequential_spam": 0,
+        "sequential_ham": 6,
+        "sequential_total": 6,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 6,
+        "standalone_total": 6
+      },
+      {
+        "name": "exmh_footer_name",
+        "sequential_spam": 0,
+        "sequential_ham": 7,
+        "sequential_total": 7,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 7,
+        "standalone_total": 7
+      },
+      {
+        "name": "exmh_footer_email",
+        "sequential_spam": 0,
+        "sequential_ham": 7,
+        "sequential_total": 7,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 7,
+        "standalone_total": 7
+      },
+      {
+        "name": "exmh_footer_url",
+        "sequential_spam": 0,
+        "sequential_ham": 7,
+        "sequential_total": 7,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 7,
+        "standalone_total": 7
+      },
+      {
+        "name": "yahoo_groups_sponsor_box",
+        "sequential_spam": 0,
+        "sequential_ham": 7,
+        "sequential_total": 7,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 7,
+        "standalone_total": 7
+      },
+      {
+        "name": "yahoo_groups_unsubscribe",
+        "sequential_spam": 0,
+        "sequential_ham": 9,
+        "sequential_total": 9,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 9,
+        "standalone_total": 9
+      },
+      {
+        "name": "yahoo_groups_terms",
+        "sequential_spam": 0,
+        "sequential_ham": 9,
+        "sequential_total": 9,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 9,
+        "standalone_total": 9
+      },
+      {
+        "name": "generic_mailman_footer",
+        "sequential_spam": 0,
+        "sequential_ham": 1,
+        "sequential_total": 1,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 24,
+        "standalone_total": 24
+      },
+      {
+        "name": "fork_listinfo_footer",
+        "sequential_spam": 0,
+        "sequential_ham": 1,
+        "sequential_total": 1,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 1,
+        "standalone_total": 1
+      },
+      {
+        "name": "rss_url_header",
+        "sequential_spam": 0,
+        "sequential_ham": 33,
+        "sequential_total": 33,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 33,
+        "standalone_total": 33
+      },
+      {
+        "name": "rss_date_header",
+        "sequential_spam": 0,
+        "sequential_ham": 35,
+        "sequential_total": 35,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 35,
+        "standalone_total": 35
+      },
+      {
+        "name": "anon_zzzz_taint_email",
+        "sequential_spam": 6,
+        "sequential_ham": 0,
+        "sequential_total": 6,
+        "sequential_spam_ids": [
+          "5ca18f579faec0e3",
+          "dd1a9d4a8ab7afdb",
+          "91b37038b2ed2b60",
+          "fe959102cf3e0016",
+          "3b72fc89f045b050",
+          "49b0a7de89983d47"
+        ],
+        "standalone_spam": 6,
+        "standalone_ham": 0,
+        "standalone_total": 6
+      },
+      {
+        "name": "anon_zzzz_other_email",
+        "sequential_spam": 2,
+        "sequential_ham": 0,
+        "sequential_total": 2,
+        "sequential_spam_ids": [
+          "5d68e15980b474ac",
+          "6aefbd0a04c67923"
+        ],
+        "standalone_spam": 8,
+        "standalone_ham": 0,
+        "standalone_total": 8
+      },
+      {
+        "name": "anon_spamassassin_taint_domain",
+        "sequential_spam": 1,
+        "sequential_ham": 2,
+        "sequential_total": 3,
+        "sequential_spam_ids": [
+          "fd88ed38f0e624ac"
+        ],
+        "standalone_spam": 7,
+        "standalone_ham": 2,
+        "standalone_total": 9
+      },
+      {
+        "name": "anon_standalone_zzzz",
+        "sequential_spam": 2,
+        "sequential_ham": 0,
+        "sequential_total": 2,
+        "sequential_spam_ids": [
+          "5d68e15980b474ac",
+          "6aefbd0a04c67923"
+        ],
+        "standalone_spam": 8,
+        "standalone_ham": 0,
+        "standalone_total": 8
+      }
+    ],
+    "validation": [
+      {
+        "name": "subject_list_tags",
+        "sequential_spam": 5,
+        "sequential_ham": 9,
+        "sequential_total": 14,
+        "sequential_spam_ids": [
+          "eec728149e9886d7",
+          "da32333482ad02f0",
+          "d52481af2cae9d6f",
+          "e8622ab1f5f53257",
+          "03d402d1641ab499"
+        ],
+        "standalone_spam": 5,
+        "standalone_ham": 9,
+        "standalone_total": 14
+      },
+      {
+        "name": "ilug_footer_header",
+        "sequential_spam": 5,
+        "sequential_ham": 1,
+        "sequential_total": 6,
+        "sequential_spam_ids": [
+          "eec728149e9886d7",
+          "da32333482ad02f0",
+          "d52481af2cae9d6f",
+          "e8622ab1f5f53257",
+          "03d402d1641ab499"
+        ],
+        "standalone_spam": 5,
+        "standalone_ham": 1,
+        "standalone_total": 6
+      },
+      {
+        "name": "ilug_footer_listinfo",
+        "sequential_spam": 5,
+        "sequential_ham": 1,
+        "sequential_total": 6,
+        "sequential_spam_ids": [
+          "eec728149e9886d7",
+          "da32333482ad02f0",
+          "d52481af2cae9d6f",
+          "e8622ab1f5f53257",
+          "03d402d1641ab499"
+        ],
+        "standalone_spam": 5,
+        "standalone_ham": 1,
+        "standalone_total": 6
+      },
+      {
+        "name": "ilug_footer_maintainer",
+        "sequential_spam": 5,
+        "sequential_ham": 1,
+        "sequential_total": 6,
+        "sequential_spam_ids": [
+          "eec728149e9886d7",
+          "da32333482ad02f0",
+          "d52481af2cae9d6f",
+          "e8622ab1f5f53257",
+          "03d402d1641ab499"
+        ],
+        "standalone_spam": 5,
+        "standalone_ham": 1,
+        "standalone_total": 6
+      },
+      {
+        "name": "rpm_list_footer_name",
+        "sequential_spam": 0,
+        "sequential_ham": 4,
+        "sequential_total": 4,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 4,
+        "standalone_total": 4
+      },
+      {
+        "name": "rpm_list_footer_url",
+        "sequential_spam": 0,
+        "sequential_ham": 4,
+        "sequential_total": 4,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 4,
+        "standalone_total": 4
+      },
+      {
+        "name": "sf_osdn_sponsor_block",
+        "sequential_spam": 0,
+        "sequential_ham": 8,
+        "sequential_total": 8,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 8,
+        "standalone_total": 8
+      },
+      {
+        "name": "satalk_footer_name",
+        "sequential_spam": 0,
+        "sequential_ham": 3,
+        "sequential_total": 3,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 3,
+        "standalone_total": 3
+      },
+      {
+        "name": "satalk_footer_email",
+        "sequential_spam": 0,
+        "sequential_ham": 3,
+        "sequential_total": 3,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 3,
+        "standalone_total": 3
+      },
+      {
+        "name": "satalk_footer_url",
+        "sequential_spam": 0,
+        "sequential_ham": 3,
+        "sequential_total": 3,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 3,
+        "standalone_total": 3
+      },
+      {
+        "name": "exmh_footer_name",
+        "sequential_spam": 0,
+        "sequential_ham": 1,
+        "sequential_total": 1,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 1,
+        "standalone_total": 1
+      },
+      {
+        "name": "exmh_footer_email",
+        "sequential_spam": 0,
+        "sequential_ham": 1,
+        "sequential_total": 1,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 1,
+        "standalone_total": 1
+      },
+      {
+        "name": "exmh_footer_url",
+        "sequential_spam": 0,
+        "sequential_ham": 1,
+        "sequential_total": 1,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 1,
+        "standalone_total": 1
+      },
+      {
+        "name": "yahoo_groups_sponsor_box",
+        "sequential_spam": 0,
+        "sequential_ham": 0,
+        "sequential_total": 0,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 0,
+        "standalone_total": 0
+      },
+      {
+        "name": "yahoo_groups_unsubscribe",
+        "sequential_spam": 0,
+        "sequential_ham": 0,
+        "sequential_total": 0,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 0,
+        "standalone_total": 0
+      },
+      {
+        "name": "yahoo_groups_terms",
+        "sequential_spam": 0,
+        "sequential_ham": 0,
+        "sequential_total": 0,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 0,
+        "standalone_total": 0
+      },
+      {
+        "name": "generic_mailman_footer",
+        "sequential_spam": 0,
+        "sequential_ham": 6,
+        "sequential_total": 6,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 14,
+        "standalone_total": 14
+      },
+      {
+        "name": "fork_listinfo_footer",
+        "sequential_spam": 0,
+        "sequential_ham": 1,
+        "sequential_total": 1,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 1,
+        "standalone_total": 1
+      },
+      {
+        "name": "rss_url_header",
+        "sequential_spam": 0,
+        "sequential_ham": 8,
+        "sequential_total": 8,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 8,
+        "standalone_total": 8
+      },
+      {
+        "name": "rss_date_header",
+        "sequential_spam": 0,
+        "sequential_ham": 8,
+        "sequential_total": 8,
+        "sequential_spam_ids": [],
+        "standalone_spam": 0,
+        "standalone_ham": 8,
+        "standalone_total": 8
+      },
+      {
+        "name": "anon_zzzz_taint_email",
+        "sequential_spam": 1,
+        "sequential_ham": 0,
+        "sequential_total": 1,
+        "sequential_spam_ids": [
+          "8f6272eaef144851"
+        ],
+        "standalone_spam": 1,
+        "standalone_ham": 0,
+        "standalone_total": 1
+      },
+      {
+        "name": "anon_zzzz_other_email",
+        "sequential_spam": 0,
+        "sequential_ham": 0,
+        "sequential_total": 0,
+        "sequential_spam_ids": [],
+        "standalone_spam": 1,
+        "standalone_ham": 0,
+        "standalone_total": 1
+      },
+      {
+        "name": "anon_spamassassin_taint_domain",
+        "sequential_spam": 0,
+        "sequential_ham": 0,
+        "sequential_total": 0,
+        "sequential_spam_ids": [],
+        "standalone_spam": 1,
+        "standalone_ham": 0,
+        "standalone_total": 1
+      },
+      {
+        "name": "anon_standalone_zzzz",
+        "sequential_spam": 0,
+        "sequential_ham": 0,
+        "sequential_total": 0,
+        "sequential_spam_ids": [],
+        "standalone_spam": 1,
+        "standalone_ham": 0,
+        "standalone_total": 1
+      }
+    ],
+    "validation_remnants_diagnostic": {
+      "n_probe_types_with_remnants": 2,
+      "remnants": {
+        "egroups": [
+          {
+            "message_id": "2d5d89669551e7d0",
+            "label": "ham"
+          }
+        ],
+        "mailing_list_line": [
+          {
+            "message_id": "4848bd860e4e2f63",
+            "label": "ham"
+          }
+        ]
+      }
+    }
+  },
+  "part_ii_stems_preservation": {
+    "validation": {
+      "remov": {
+        "spam_before_masking": 10,
+        "spam_after_masking": 10,
+        "unchanged": true,
+        "lost_ids": []
+      },
+      "unsubscrib": {
+        "spam_before_masking": 3,
+        "spam_after_masking": 3,
+        "unchanged": true,
+        "lost_ids": []
+      },
+      "exact_remove_info": {
+        "text_before": 9,
+        "text_after": 9,
+        "tokens_with_masking": 8,
+        "tokens_without_masking": 8
+      }
+    },
+    "train": {
+      "remov": {
+        "spam_before_masking": 33,
+        "spam_after_masking": 33,
+        "unchanged": true,
+        "lost_ids": []
+      },
+      "unsubscrib": {
+        "spam_before_masking": 9,
+        "spam_after_masking": 9,
+        "unchanged": true,
+        "lost_ids": []
+      },
+      "exact_remove_info": {
+        "text_before": 24,
+        "text_after": 24,
+        "tokens_with_masking": 17,
+        "tokens_without_masking": 17
+      }
+    },
+    "validation_stems_unchanged": true
+  },
+  "part_iii_suffix_currency_symbols": {
+    "synthetic_tests": [
+      {
+        "input": "Subject: Offer 100$ now",
+        "expected_contains": "<MONEY>",
+        "actual_tokens": [
+          "offer",
+          "<NUM>",
+          "now"
+        ],
+        "matches_expected": false
+      },
+      {
+        "input": "Subject: Win 100.000$ today",
+        "expected_contains": "<MONEY>",
+        "actual_tokens": [
+          "win",
+          "<NUM>",
+          "today"
+        ],
+        "matches_expected": false
+      },
+      {
+        "input": "Subject: Pay 50 € now",
+        "expected_contains": "<MONEY>",
+        "actual_tokens": [
+          "pay",
+          "<NUM>",
+          "now"
+        ],
+        "matches_expected": false
+      },
+      {
+        "input": "Subject: Cost 25£ only",
+        "expected_contains": "<MONEY>",
+        "actual_tokens": [
+          "cost",
+          "<NUM>",
+          "only"
+        ],
+        "matches_expected": false
+      }
+    ],
+    "synthetic_bug_confirmed": true,
+    "train": {
+      "n_messages": 1,
+      "n_spam_messages": 1,
+      "n_ham_messages": 0,
+      "n_occurrences": 1,
+      "n_occurrences_giving_money_token": 0,
+      "n_occurrences_missed": 1,
+      "messages": [
+        {
+          "message_id": "52c16dcd1605d5e8",
+          "label": "spam",
+          "n_occurrences": 1,
+          "fragments": [
+            {
+              "fragment": "100.000$",
+              "gives_money_token": false,
+              "tokens_for_fragment": [
+                "<NUM>"
+              ]
+            }
+          ]
+        }
+      ],
+      "informational_word_euro_pound": {
+        "n_messages": 2,
+        "messages": [
+          {
+            "message_id": "c69499c749040caa",
+            "label": "spam",
+            "matches": [
+              "170 Euros",
+              "105 pounds"
+            ]
+          },
+          {
+            "message_id": "3a95f253d32512f6",
+            "label": "spam",
+            "matches": [
+              "170 Euros",
+              "105 pounds"
+            ]
+          }
+        ]
+      }
+    },
+    "validation": {
+      "n_messages": 0,
+      "n_spam_messages": 0,
+      "n_ham_messages": 0,
+      "n_occurrences": 0,
+      "n_occurrences_giving_money_token": 0,
+      "n_occurrences_missed": 0,
+      "messages": [],
+      "informational_word_euro_pound": {
+        "n_messages": 2,
+        "messages": [
+          {
+            "message_id": "27bcc632c0a2fc78",
+            "label": "spam",
+            "matches": [
+              "170 Euros",
+              "105 pounds"
+            ]
+          },
+          {
+            "message_id": "017f0817d4c92951",
+            "label": "spam",
+            "matches": [
+              "0.34 Euros",
+              "0.34 Euros"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "part_iv_literal_special_tags": {
+    "synthetic_tests": [
+      {
+        "input": "Subject: See <url> and <money> in docs",
+        "expected_not_contains": [
+          "<URL>",
+          "<MONEY>"
+        ],
+        "actual_tokens": [
+          "see",
+          "<URL>",
+          "and",
+          "<MONEY>",
+          "in",
+          "docs"
+        ],
+        "spurious_special_tokens": [
+          "<URL>",
+          "<MONEY>"
+        ],
+        "matches_expected": false
+      },
+      {
+        "input": "Subject: Token <CAPS> literal",
+        "expected_not_contains": [
+          "<CAPS>"
+        ],
+        "actual_tokens": [
+          "token",
+          "caps",
+          "<CAPS>",
+          "literal"
+        ],
+        "spurious_special_tokens": [
+          "<CAPS>"
+        ],
+        "matches_expected": false
+      }
+    ],
+    "synthetic_bug_confirmed": true,
+    "train": {
+      "n_messages": 0,
+      "n_spam_messages": 0,
+      "n_ham_messages": 0,
+      "messages": []
+    },
+    "validation": {
+      "n_messages": 0,
+      "n_spam_messages": 0,
+      "n_ham_messages": 0,
+      "messages": []
+    }
+  },
+  "extra_diagnostics_from_table_d": {
+    "url_ending_with_exclam": {
+      "synthetic_input": "Subject: Visit http://example.com! now",
+      "synthetic_expected_contains": [
+        "<URL>",
+        "<EXCLAM>"
+      ],
+      "synthetic_actual_tokens": [
+        "visit",
+        "<URL>",
+        "now"
+      ],
+      "exclam_swallowed_in_synthetic": true,
+      "train": {
+        "n_messages": 0,
+        "n_spam_messages": 0,
+        "n_ham_messages": 0,
+        "messages": []
+      },
+      "validation": {
+        "n_messages": 0,
+        "n_spam_messages": 0,
+        "n_ham_messages": 0,
+        "messages": []
+      }
+    },
+    "fn_017f0817d4c92951_explain_top50_check": {
+      "total_known_unique_tokens": 82,
+      "exceeds_top_k_50": true,
+      "top5_negative_all_matches_top50": true,
+      "top5_negative_all": [
+        {
+          "token": "<NUM>",
+          "tfidf": 0.2371253160378246,
+          "weight": -0.6513017178727256,
+          "contribution": -0.15444012568654814
+        },
+        {
+          "token": "la",
+          "tfidf": 0.2849673583706384,
+          "weight": -0.19072449642212094,
+          "contribution": -0.05435025592198208
+        },
+        {
+          "token": "de",
+          "tfidf": 0.8660722362993811,
+          "weight": -0.04255521424663279,
+          "contribution": -0.036855889568780546
+        },
+        {
+          "token": "re",
+          "tfidf": 0.01399990450363234,
+          "weight": -1.8262667206174985,
+          "contribution": -0.02556755968680678
+        },
+        {
+          "token": "dont",
+          "tfidf": 0.02947938190041087,
+          "weight": -0.1878750846161187,
+          "contribution": -0.005538441368970571
+        }
+      ],
+      "top5_negative_from_top50": [
+        {
+          "token": "<NUM>",
+          "tfidf": 0.2371253160378246,
+          "weight": -0.6513017178727256,
+          "contribution": -0.15444012568654814
+        },
+        {
+          "token": "la",
+          "tfidf": 0.2849673583706384,
+          "weight": -0.19072449642212094,
+          "contribution": -0.05435025592198208
+        },
+        {
+          "token": "de",
+          "tfidf": 0.8660722362993811,
+          "weight": -0.04255521424663279,
+          "contribution": -0.036855889568780546
+        },
+        {
+          "token": "re",
+          "tfidf": 0.01399990450363234,
+          "weight": -1.8262667206174985,
+          "contribution": -0.02556755968680678
+        },
+        {
+          "token": "dont",
+          "tfidf": 0.02947938190041087,
+          "weight": -0.1878750846161187,
+          "contribution": -0.005538441368970571
+        }
+      ]
+    }
+  },
+  "passed_stems_check": true
+}

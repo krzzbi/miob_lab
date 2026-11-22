@@ -1,0 +1,138 @@
+{
+  "check": "S3",
+  "description": "Niezalezna macierz pomylek bez importow z src/ (laczenie po message_id dla modelu glownego i alternatywnego)",
+  "imports_from_src": false,
+  "validation_csv": {
+    "rows": 60,
+    "n_ham": 40,
+    "n_spam": 20,
+    "duplicate_message_ids": []
+  },
+  "selected_model": {
+    "pred_rows": 60,
+    "joined_rows": 60,
+    "missing_message_ids": [],
+    "extra_message_ids": [],
+    "duplicate_message_ids": [],
+    "computed": {
+      "confusion_matrix": {
+        "tp": 19,
+        "fp": 0,
+        "fn": 1,
+        "tn": 40
+      },
+      "n_total": 60,
+      "n_spam": 20,
+      "n_ham": 40,
+      "fpr": 0.0,
+      "recall": 0.95,
+      "precision": 1.0,
+      "accuracy": 0.9833333333333333,
+      "pr_auc": 1.0
+    },
+    "recorded_confusion_matrix": {
+      "fn": 1,
+      "fp": 0,
+      "tn": 40,
+      "tp": 19
+    },
+    "cm_match": true,
+    "metrics_diffs": {
+      "fpr_abs_diff": 0.0,
+      "recall_abs_diff": 0.0,
+      "precision_abs_diff": 0.0,
+      "accuracy_abs_diff": 0.0,
+      "pr_auc_abs_diff": 0.0
+    },
+    "floats_match_lt_1e_12": true,
+    "passed": true
+  },
+  "alternative_model": {
+    "pred_rows": 60,
+    "joined_rows": 60,
+    "missing_message_ids": [],
+    "extra_message_ids": [],
+    "duplicate_message_ids": [],
+    "computed": {
+      "confusion_matrix": {
+        "tp": 19,
+        "fp": 0,
+        "fn": 1,
+        "tn": 40
+      },
+      "n_total": 60,
+      "n_spam": 20,
+      "n_ham": 40,
+      "fpr": 0.0,
+      "recall": 0.95,
+      "precision": 1.0,
+      "accuracy": 0.9833333333333333,
+      "pr_auc": 0.9976190476190476
+    },
+    "recorded_confusion_matrix": {
+      "fn": 1,
+      "fp": 0,
+      "tn": 40,
+      "tp": 19
+    },
+    "cm_match": true,
+    "metrics_diffs": {
+      "fpr_abs_diff": 0.0,
+      "recall_abs_diff": 0.0,
+      "precision_abs_diff": 0.0,
+      "accuracy_abs_diff": 0.0,
+      "pr_auc_abs_diff": 0.0
+    },
+    "floats_match_lt_1e_12": true,
+    "passed": true
+  },
+  "always_ham_match": true,
+  "informational_thresholds_check": {
+    "0.25": {
+      "computed_cm": {
+        "tp": 19,
+        "fp": 0,
+        "fn": 1,
+        "tn": 40
+      },
+      "recorded_cm": {
+        "fn": 1,
+        "fp": 0,
+        "tn": 40,
+        "tp": 19
+      },
+      "match": true
+    },
+    "0.40": {
+      "computed_cm": {
+        "tp": 19,
+        "fp": 0,
+        "fn": 1,
+        "tn": 40
+      },
+      "recorded_cm": {
+        "fn": 1,
+        "fp": 0,
+        "tn": 40,
+        "tp": 19
+      },
+      "match": true
+    },
+    "0.50": {
+      "computed_cm": {
+        "tp": 19,
+        "fp": 0,
+        "fn": 1,
+        "tn": 40
+      },
+      "recorded_cm": {
+        "fn": 1,
+        "fp": 0,
+        "tn": 40,
+        "tp": 19
+      },
+      "match": true
+    }
+  },
+  "passed": true
+}

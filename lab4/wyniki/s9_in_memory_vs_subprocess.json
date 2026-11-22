@@ -1,0 +1,44 @@
+{
+  "check": "S9",
+  "description": "Porownanie obiektow w pamieci prosto po uczeniu (przed zapisem JSON) z podprocesem predict.py na CSV bez kolumny label",
+  "expected": {
+    "unlabeled_header": [
+      "message_id",
+      "text"
+    ],
+    "in_memory_serialization_matches_s2_sha256": true,
+    "max_abs_diff_lt": 1e-12,
+    "label_mismatches": 0,
+    "stdin_mode_matches_in_memory": true
+  },
+  "unlabeled_csv_header": [
+    "message_id",
+    "text"
+  ],
+  "in_memory_serialization_check": {
+    "winner_sha256_matches_s2": true,
+    "alternative_sha256_matches_s2": true
+  },
+  "winner_comparison": {
+    "n_messages": 60,
+    "max_abs_diff_vs_subprocess": 0.0,
+    "label_mismatches_vs_subprocess": 0,
+    "max_abs_diff_vs_s2_csv": 0.0,
+    "label_mismatches_vs_s2_csv": 0,
+    "passed": true
+  },
+  "alternative_comparison": {
+    "n_messages": 60,
+    "max_abs_diff_vs_subprocess": 0.0,
+    "label_mismatches_vs_subprocess": 0,
+    "max_abs_diff_vs_s2_csv": 0.0,
+    "label_mismatches_vs_s2_csv": 0,
+    "passed": true
+  },
+  "stdin_mode_check": {
+    "returncode": 0,
+    "abs_diff": 0.0,
+    "passed": true
+  },
+  "passed": true
+}
