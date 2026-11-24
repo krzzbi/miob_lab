@@ -1,0 +1,23 @@
+{
+  "all_match": true,
+  "current": {
+    "model": {
+      "path": "model/model.json",
+      "sha256": "a12f53e2e33962253db86366574d5679ea997ad9ced2e44cd872f78b871b2e51"
+    },
+    "src_file_count": 8,
+    "src_files": {
+      "src/__init__.py": "ce0f77c38c95f4f5cb7fcfa1e3f623c7e7e8fc7ad82b954b7e1585ddf3d11e13",
+      "src/data_io.py": "c8759634c4e205fbd3ce3960e4e49d44e9e680a7386b4b9c4b2d4a98a95def17",
+      "src/evaluate.py": "18e08cb245c1c7ed9ff25c88d7bc80d6a3f1f69265cc5432654f68c6cee2cc82",
+      "src/experiment.py": "68db78a4d9a421ecc8d9c738d526285a2e8eddcafa5c124ca7ae8308b95998cb",
+      "src/models.py": "315c3328e8a584558bd97ef384378ecd7f9344907f2c08531f3abdd4fe6e39d4",
+      "src/png_decoder.py": "fab9a11d243394ecd0c8a0f7860bdb1bc7a3a266c56767df5789de9b72c1fee2",
+      "src/predict.py": "65862fcb1eaed1056f96f207b5b22800fdd9f262132696dad05f69409d7e474a",
+      "src/train.py": "2690fff8643409b416213b9cfd56300c0c805781745bd02ee395dd384bed69a4"
+    }
+  },
+  "expected_file": "wyniki/sha_przed_testem.json",
+  "model_match": true,
+  "src_files_match": true
+}

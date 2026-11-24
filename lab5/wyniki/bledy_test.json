@@ -1,0 +1,218 @@
+{
+  "error_count": 5,
+  "errors": [
+    {
+      "description": "Widoczna gorna pozioma belka i smukly pionowy/lekko skosny trzon schodzacy w dol bez wyraźnego dolnego lewego zawiniecia. NN1 (klasa 3, L2=0.76) ma niemal identyczny ksztalt; [przypuszczenie] rowne glosowanie w k=3 pozwolilo dwom ponad 2x dalszym sasiadom klasy 8 (L2=1.56 i 1.65) przeglosowac najblizszego sasiada.",
+      "image_id": "digit-dbf4f7702a6f",
+      "image_path": "images/digit-dbf4f7702a6f.png",
+      "nearest_neighbor_correct": true,
+      "nearest_neighbors": [
+        {
+          "image_id": "digit-ce5d5c88907d",
+          "image_path": "images/digit-ce5d5c88907d.png",
+          "l2_distance": 0.7630147212349332,
+          "label": 3,
+          "rank": 1,
+          "sq_l2_distance": 0.5821914648212227
+        },
+        {
+          "image_id": "digit-1d482de21e60",
+          "image_path": "images/digit-1d482de21e60.png",
+          "l2_distance": 1.5645781067293831,
+          "label": 8,
+          "rank": 2,
+          "sq_l2_distance": 2.447904652056901
+        },
+        {
+          "image_id": "digit-1379413abf2e",
+          "image_path": "images/digit-1379413abf2e.png",
+          "l2_distance": 1.6458165249605259,
+          "label": 8,
+          "rank": 3,
+          "sq_l2_distance": 2.708712033833141
+        }
+      ],
+      "predicted_label": 8,
+      "true_label": 3
+    },
+    {
+      "description": "W gornej polowie widoczne sa dwie jasne galezie (lewa i prawa) tworzace ksztalt zblizony do gornej petli oraz dluga skosna kreska w lewo w dol. Wszyscy trzej sasiedzi to klasa 9 w duzej odleglosci (L2=1.82-1.88); [przypuszczenie] jasne piksele po lewej stronie gory znaku zblizaja go w metryce pikselowej L2 do 9 przy braku bliskiego wzorca takiej 7 w train.",
+      "image_id": "digit-09e2a05d6bd2",
+      "image_path": "images/digit-09e2a05d6bd2.png",
+      "nearest_neighbor_correct": false,
+      "nearest_neighbors": [
+        {
+          "image_id": "digit-5ea2b6284a92",
+          "image_path": "images/digit-5ea2b6284a92.png",
+          "l2_distance": 1.8212636144728027,
+          "label": 9,
+          "rank": 1,
+          "sq_l2_distance": 3.317001153402538
+        },
+        {
+          "image_id": "digit-cb8a1ed47b04",
+          "image_path": "images/digit-cb8a1ed47b04.png",
+          "l2_distance": 1.869268248047969,
+          "label": 9,
+          "rank": 2,
+          "sq_l2_distance": 3.4941637831603236
+        },
+        {
+          "image_id": "digit-e3f17d7f3f18",
+          "image_path": "images/digit-e3f17d7f3f18.png",
+          "l2_distance": 1.8796508383541175,
+          "label": 9,
+          "rank": 3,
+          "sq_l2_distance": 3.5330872741253367
+        }
+      ],
+      "predicted_label": 9,
+      "true_label": 7
+    },
+    {
+      "description": "Gorna czesc jest otwarta u gory (brak jasnego laczenia w wierszu 0-1), z mocna pozioma belka w wierszu 3 i pionowym trzonem po prawej (slabszym w wierszach 5-7). NN1 i NN2 (klasa 4, L2=1.33 i 1.53) maja bardzo podobny uklad otwartej gory i belki; [przypuszczenie] przy rozdzielczosci 8x8 brak wyraznego gornego domkniecia petli zbliza obraz do otwartej 4.",
+      "image_id": "digit-7043c36778f2",
+      "image_path": "images/digit-7043c36778f2.png",
+      "nearest_neighbor_correct": false,
+      "nearest_neighbors": [
+        {
+          "image_id": "digit-fcaf9b902fc5",
+          "image_path": "images/digit-fcaf9b902fc5.png",
+          "l2_distance": 1.3294059806687755,
+          "label": 4,
+          "rank": 1,
+          "sq_l2_distance": 1.7673202614379087
+        },
+        {
+          "image_id": "digit-ac48af5bfa2a",
+          "image_path": "images/digit-ac48af5bfa2a.png",
+          "l2_distance": 1.5286322799951892,
+          "label": 4,
+          "rank": 2,
+          "sq_l2_distance": 2.3367166474432906
+        },
+        {
+          "image_id": "digit-4472669ae657",
+          "image_path": "images/digit-4472669ae657.png",
+          "l2_distance": 1.5680292977199968,
+          "label": 9,
+          "rank": 3,
+          "sq_l2_distance": 2.4587158785082663
+        }
+      ],
+      "predicted_label": 4,
+      "true_label": 9
+    },
+    {
+      "description": "Wyrazna skosna lewa krawedz, mocna pozioma belka w wierszach 4-5 i pionowy trzon w kolumnie 5 (ciemniejszy u samego dolu). NN1 (klasa 4, L2=1.49) ma zblizona sylwetke, natomiast NN2 i NN3 (klasa 1, L2=1.73 i 1.80) maja szerokie, skosne zageszczenie pikseli w srodku; [przypuszczenie] rowne glosy w k=3 przewazyly 2:1 na korzysc dwoch dalszych sasiadow klasy 1.",
+      "image_id": "digit-4d543bd1092b",
+      "image_path": "images/digit-4d543bd1092b.png",
+      "nearest_neighbor_correct": true,
+      "nearest_neighbors": [
+        {
+          "image_id": "digit-dea973fbb141",
+          "image_path": "images/digit-dea973fbb141.png",
+          "l2_distance": 1.4883528331997793,
+          "label": 4,
+          "rank": 1,
+          "sq_l2_distance": 2.2151941560938098
+        },
+        {
+          "image_id": "digit-b3cdfaa5d06c",
+          "image_path": "images/digit-b3cdfaa5d06c.png",
+          "l2_distance": 1.7327920368536636,
+          "label": 1,
+          "rank": 2,
+          "sq_l2_distance": 3.002568242983468
+        },
+        {
+          "image_id": "digit-9894f8734c0f",
+          "image_path": "images/digit-9894f8734c0f.png",
+          "l2_distance": 1.8029409099147893,
+          "label": 1,
+          "rank": 3,
+          "sq_l2_distance": 3.2505959246443683
+        }
+      ],
+      "predicted_label": 1,
+      "true_label": 4
+    },
+    {
+      "description": "Pionowa jasna kreska w kolumnie 3 od wiersza 0 do 6 oraz szeroka, jasna podstawa u dolu w wierszach 5-7 (kolumny 2-6). Odleglosci wszystkich 3 sasiadow sa bardzo zblizone (NN1 klasa 1: 1.66; NN2 i NN3 klasa 6: 1.69 i 1.70); [przypuszczenie] mocna dolna podstawa w siatce 8x8 pokrywa piksele typowe dla dolnej petli cyfry 6.",
+      "image_id": "digit-826cb4bf68f5",
+      "image_path": "images/digit-826cb4bf68f5.png",
+      "nearest_neighbor_correct": true,
+      "nearest_neighbors": [
+        {
+          "image_id": "digit-955c95de8e7c",
+          "image_path": "images/digit-955c95de8e7c.png",
+          "l2_distance": 1.661292373153053,
+          "label": 1,
+          "rank": 1,
+          "sq_l2_distance": 2.759892349096502
+        },
+        {
+          "image_id": "digit-6408cbf7be58",
+          "image_path": "images/digit-6408cbf7be58.png",
+          "l2_distance": 1.6898002357087383,
+          "label": 6,
+          "rank": 2,
+          "sq_l2_distance": 2.855424836601307
+        },
+        {
+          "image_id": "digit-40795ec77ef8",
+          "image_path": "images/digit-40795ec77ef8.png",
+          "l2_distance": 1.702868647354297,
+          "label": 6,
+          "rank": 3,
+          "sq_l2_distance": 2.8997616301422533
+        }
+      ],
+      "predicted_label": 6,
+      "true_label": 1
+    }
+  ],
+  "nn1_correct_among_errors": 3,
+  "png_layout": {
+    "columns": [
+      "lewa kolumna opisowa (#numer, prawdziwa->przewidziana, skrocone ID, status NN1)",
+      "obraz testowy 8x8 powiekszony x8 (64x64 px, bez wygladzania)",
+      "pionowy separator",
+      "NN1 (64x64 px, jasna ramka gdy etykieta zgodna z prawdziwa)",
+      "NN2 (64x64 px)",
+      "NN3 (64x64 px)"
+    ],
+    "file": "wyniki/bledy_test.png",
+    "scale": 8,
+    "tile_px": 64
+  },
+  "test_summary": {
+    "accuracy": 0.975,
+    "errors": 5,
+    "hits": 195,
+    "tie_stats_test": {
+      "distance_tie_among_tied_classes": 0,
+      "distance_tie_at_k_boundary": 0,
+      "vote_tie": 1
+    },
+    "total": 200,
+    "wilson_95": {
+      "center": 0.9660484699707983,
+      "lower": 0.942821659593358,
+      "upper": 0.9892752803482386,
+      "z": 1.959963984540054
+    }
+  },
+  "validation_summary": {
+    "accuracy": 0.965,
+    "errors": 7,
+    "hits": 193,
+    "total": 200,
+    "wilson_95": {
+      "center": 0.956236923234571,
+      "lower": 0.9295293884777092,
+      "upper": 0.9829444579914328,
+      "z": 1.959963984540054
+    }
+  }
+}

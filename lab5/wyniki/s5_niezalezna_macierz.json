@@ -1,0 +1,173 @@
+{
+  "all_checks_passed": true,
+  "comparisons_with_evaluate_py": {
+    "confusion_matrix_equal": true,
+    "errors_equal": true,
+    "hits_equal": true,
+    "misclassified_ids_equal": true,
+    "total_equal": true
+  },
+  "independent_result": {
+    "confusion_matrix": [
+      [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        19,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20
+      ]
+    ],
+    "errors": 7,
+    "hits": 193,
+    "misclassified_image_ids": [
+      "digit-16f042b319a2",
+      "digit-09435dfabf79",
+      "digit-482b447dae2f",
+      "digit-4372983ea6ed",
+      "digit-e02caf99f58a",
+      "digit-759c0be23b3e",
+      "digit-542e2b56f1d7"
+    ],
+    "most_confused_pairs": [
+      {
+        "count": 2,
+        "predicted_label": 9,
+        "true_label": 5
+      },
+      {
+        "count": 2,
+        "predicted_label": 1,
+        "true_label": 8
+      },
+      {
+        "count": 1,
+        "predicted_label": 3,
+        "true_label": 1
+      },
+      {
+        "count": 1,
+        "predicted_label": 9,
+        "true_label": 2
+      },
+      {
+        "count": 1,
+        "predicted_label": 6,
+        "true_label": 4
+      }
+    ],
+    "total": 200
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "centroid_predictions_source": "test_odniesienie_centroid.json nie zawiera przewidywan per obraz; przewidywania centroidu (L2 na pixel/255) wyznaczono niezaleznie bez importu z src/ na data/train.csv -> data/test.csv i zweryfikowano pelna zgodnosc macierzy 10x10 oraz liczby trafien z wyniki/test_odniesienie_centroid.json.",
+  "contingency_table": {
+    "both_correct": 185,
+    "both_wrong": 4,
+    "knn_correct_centroid_wrong": 10,
+    "knn_wrong_centroid_correct": 1
+  },
+  "cross_checks": {
+    "centroid_hits_matches_ref": true,
+    "centroid_matrix_matches_ref": true,
+    "knn_hits_matches_eval": true
+  },
+  "discordant_cases": {
+    "centroid_only_correct": [
+      {
+        "centroid_pred": 4,
+        "image_id": "digit-4d543bd1092b",
+        "knn_pred": 1,
+        "true_label": 4
+      }
+    ],
+    "knn_only_correct": [
+      {
+        "centroid_pred": 1,
+        "image_id": "digit-3b04346a81c7",
+        "knn_pred": 4,
+        "true_label": 4
+      },
+      {
+        "centroid_pred": 8,
+        "image_id": "digit-b01e4050010e",
+        "knn_pred": 2,
+        "true_label": 2
+      },
+      {
+        "centroid_pred": 2,
+        "image_id": "digit-85b160f61513",
+        "knn_pred": 1,
+        "true_label": 1
+      },
+      {
+        "centroid_pred": 2,
+        "image_id": "digit-6d8e491ccf84",
+        "knn_pred": 1,
+        "true_label": 1
+      },
+      {
+        "centroid_pred": 1,
+        "image_id": "digit-c15d2a8de990",
+        "knn_pred": 8,
+        "true_label": 8
+      },
+      {
+        "centroid_pred": 5,
+        "image_id": "digit-c4184d8a0647",
+        "knn_pred": 9,
+        "true_label": 9
+      },
+      {
+        "centroid_pred": 9,
+        "image_id": "digit-4c5c0534e4b8",
+        "knn_pred": 3,
+        "true_label": 3
+      },
+      {
+        "centroid_pred": 9,
+        "image_id": "digit-4ec8dd20ff0a",
+        "knn_pred": 1,
+        "true_label": 1
+      },
+      {
+        "centroid_pred": 4,
+        "image_id": "digit-0c6c36dbb333",
+        "knn_pred": 7,
+        "true_label": 7
+      },
+      {
+        "centroid_pred": 7,
+        "image_id": "digit-3d3ce431295e",
+        "knn_pred": 9,
+        "true_label": 9
+      }
+    ]
+  },
+  "mcnemar_exact_two_sided": {
+    "b_knn_correct_centroid_wrong": 10,
+    "c_knn_wrong_centroid_correct": 1,
+    "discordant_total": 11,
+    "p_value": 0.01171875
+  },
+  "summary": {
+    "centroid_hits": 186,
+    "knn_hits": 195,
+    "total": 200
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "all_passed": true,
+  "s3_reproducibility": {
+    "byte_identical": true,
+    "model_bytes": 761154,
+    "sha256_run1": "a12f53e2e33962253db86366574d5679ea997ad9ced2e44cd872f78b871b2e51",
+    "sha256_run2": "a12f53e2e33962253db86366574d5679ea997ad9ced2e44cd872f78b871b2e51",
+    "train_time_run1_s": 0.18394145800266415,
+    "train_time_run2_s": 0.09322145898477174
+  },
+  "s4_inference": {
+    "batch_elapsed_s": 0.4255334580084309,
+    "batch_image_ids_preserved": true,
+    "batch_image_paths_preserved": true,
+    "batch_total": 200,
+    "batch_vs_in_memory_diffs": 0,
+    "label_column_rejected": true,
+    "label_rejection_returncode": 1,
+    "label_rejection_stderr": "Traceback (most recent call last):\n  File \"/Users/jasminetea/Coding/WATs3/miob_lab/lab5/src/predict.py\", line 110, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/Users/jasminetea/Coding/WATs3/miob_lab/lab5/src/predict.py\", line 99, in main\n    count = predict_batch(\n            ^^^^^^^^^^^^^^\n  File \"/Users/jasminetea/Coding/WATs3/miob_lab/lab5/src/predict.py\", line 34, in predict_batch\n    rows = load_unlabeled_csv(input_csv)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jasminetea/Coding/WATs3/miob_lab/lab5/src/data_io.py\", line 66, in load_unlabeled_csv\n    raise ValueError(\nValueError: Plik wejsciowy data/validation.csv zawiera kolumne 'label' — predict.py nie wczytuje plikow z etykietami.",
+    "single_image_checks": [
+      {
+        "batch_pred": 8,
+        "elapsed_s": 0.05072616599500179,
+        "image_id": "digit-6380a7d3f106",
+        "image_path": "images/digit-6380a7d3f106.png",
+        "match": true,
+        "single_pred": 8
+      },
+      {
+        "batch_pred": 0,
+        "elapsed_s": 0.0490937500144355,
+        "image_id": "digit-29de79428916",
+        "image_path": "images/digit-29de79428916.png",
+        "match": true,
+        "single_pred": 0
+      },
+      {
+        "batch_pred": 9,
+        "elapsed_s": 0.051389125001151115,
+        "image_id": "digit-ac6ea2065146",
+        "image_path": "images/digit-ac6ea2065146.png",
+        "match": true,
+        "single_pred": 9
+      }
+    ],
+    "single_vs_batch_all_match": true
+  }
+}

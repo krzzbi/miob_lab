@@ -1,0 +1,199 @@
+{
+  "accuracy": 0.965,
+  "confusion_matrix": [
+    [
+      20,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      19,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      19,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      19,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      18,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      20,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      20,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      18,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      20
+    ]
+  ],
+  "errors": 7,
+  "hits": 193,
+  "misclassified": [
+    {
+      "image_id": "digit-16f042b319a2",
+      "image_path": "images/digit-16f042b319a2.png",
+      "predicted_label": 9,
+      "true_label": 5
+    },
+    {
+      "image_id": "digit-09435dfabf79",
+      "image_path": "images/digit-09435dfabf79.png",
+      "predicted_label": 3,
+      "true_label": 1
+    },
+    {
+      "image_id": "digit-482b447dae2f",
+      "image_path": "images/digit-482b447dae2f.png",
+      "predicted_label": 9,
+      "true_label": 2
+    },
+    {
+      "image_id": "digit-4372983ea6ed",
+      "image_path": "images/digit-4372983ea6ed.png",
+      "predicted_label": 1,
+      "true_label": 8
+    },
+    {
+      "image_id": "digit-e02caf99f58a",
+      "image_path": "images/digit-e02caf99f58a.png",
+      "predicted_label": 1,
+      "true_label": 8
+    },
+    {
+      "image_id": "digit-759c0be23b3e",
+      "image_path": "images/digit-759c0be23b3e.png",
+      "predicted_label": 9,
+      "true_label": 5
+    },
+    {
+      "image_id": "digit-542e2b56f1d7",
+      "image_path": "images/digit-542e2b56f1d7.png",
+      "predicted_label": 6,
+      "true_label": 4
+    }
+  ],
+  "most_confused_pairs": [
+    {
+      "count": 2,
+      "predicted_label": 9,
+      "true_label": 5
+    },
+    {
+      "count": 2,
+      "predicted_label": 1,
+      "true_label": 8
+    },
+    {
+      "count": 1,
+      "predicted_label": 3,
+      "true_label": 1
+    },
+    {
+      "count": 1,
+      "predicted_label": 9,
+      "true_label": 2
+    },
+    {
+      "count": 1,
+      "predicted_label": 6,
+      "true_label": 4
+    }
+  ],
+  "total": 200
+}

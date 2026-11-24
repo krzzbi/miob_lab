@@ -1,0 +1,44 @@
+{
+  "all_passed": true,
+  "batch_file": "wyniki/test_predictions.csv",
+  "batch_image_ids_match": true,
+  "batch_image_paths_match": true,
+  "batch_total": 200,
+  "batch_vs_in_memory_diffs": 0,
+  "model_settings": {
+    "k": 3,
+    "metric": "l2",
+    "model_type": "knn"
+  },
+  "single_image_checks": [
+    {
+      "elapsed_s": 0.06158545799553394,
+      "file_pred": 1,
+      "image_id": "digit-2e78088d9c42",
+      "image_path": "images/digit-2e78088d9c42.png",
+      "in_memory_pred": 1,
+      "match": true,
+      "single_pred": 1
+    },
+    {
+      "elapsed_s": 0.06102645897772163,
+      "file_pred": 9,
+      "image_id": "digit-cb2c26a7ce93",
+      "image_path": "images/digit-cb2c26a7ce93.png",
+      "in_memory_pred": 9,
+      "match": true,
+      "single_pred": 9
+    },
+    {
+      "elapsed_s": 0.05916133298887871,
+      "file_pred": 5,
+      "image_id": "digit-dca372142581",
+      "image_path": "images/digit-dca372142581.png",
+      "in_memory_pred": 5,
+      "match": true,
+      "single_pred": 5
+    }
+  ],
+  "single_image_matches": 3,
+  "single_image_total": 3
+}
